@@ -1,4 +1,6 @@
-mp4-script/bin/activate
+mp4-script/bin/*
+mp4-script/lib/*
+video_files/*
 mp4-script/bin/activate.csh
 mp4-script/bin/activate.fish
 mp4-script/bin/Activate.ps1
@@ -23492,3 +23494,4 @@ mp4-script/pyvenv.cfg
 mp4-script/share/man/man1/isympy.1
 video_files/v12044gd0000d1uvsfvog65mcdbbcfj0.MP4
 video_files/v12044gd0000d1uvsfvog65mcdbbcfj0.MP4
+mp4-script/bin/nltk
