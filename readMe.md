@@ -102,6 +102,7 @@ speech_analysis speech.mp4 --model medium --graph -v --output-dir ./results
 | `--output-dir PATH` | Specify output directory (default: current directory)              |
 | `--model NAME`      | Choose Whisper model: tiny/base/small/medium/large (default: base) |
 | `--verbose`, `-v`   | Show detailed analysis output                                      |
+| `--llm-prompt`      | Print LLM prompt template (for copying to AI assistants)           |
 | `--version`         | Show version number                                                |
 
 ## 📊 Output
@@ -157,12 +158,10 @@ The tool always creates a JSON file with complete analysis:
 
 ## 🤖 Using with LLMs for Improvement
 
-Take your JSON output and use this prompt with Claude, ChatGPT, or any LLM:
+### Step 1: Get the prompt template
 
-```
-Help me improve my speech. Here is my analysis in JSON format. It was analyzed by a speech analysis tool and contains: my full transcript, statistics (total words, unique words, filler word count and percentage), readability score with interpretation, a breakdown of which filler words I used and how many times, and the top 15 most frequently used meaningful words. Please review this data and give me specific, actionable suggestions to improve my speaking clarity, reduce filler words, and make my speech more engaging.
-
-[paste your JSON here]
+```bash
+speech_analysis --llm-prompt
 ```
 
 ## 📁 File Organization
