@@ -246,7 +246,7 @@ Current version: 2.0.0
 
 ## 👤 Author
 
-Created by sultansamid
+Created by Samuel Damon
 
 ---
 
