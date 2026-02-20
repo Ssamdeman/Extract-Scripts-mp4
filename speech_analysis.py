@@ -12,7 +12,11 @@ import collections
 
 import json
 
+import hashlib
+
 from datetime import datetime
+
+from output_manager import append_to_metrics, get_file_id, is_file_processed
 
 import re
 
@@ -342,45 +346,15 @@ def detect_file_type(filepath):
 
     return ext in text_extensions
 
-def setup_output_paths(file_path, output_dir):
-
-    """Creates output directory and returns paths for JSON and transcript."""
-
-    # Ensure output_dir exists
-
-    os.makedirs(output_dir, exist_ok=True)
-
-    
-
+def setup_transcript_path(file_path):
     filename = os.path.basename(file_path)
-
     base_name = os.path.splitext(filename)[0]
-
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-
-    
-
-    # JSON always goes to output_dir
-
-    json_path = os.path.join(output_dir, f"analysis_{base_name}_{timestamp}.json")
-
-    
-
-    # Transcripts subfolder only for videos
-
     transcript_path = None
-
     if not detect_file_type(file_path):
-
-        transcript_dir = os.path.join(output_dir, "transcripts")
-
+        transcript_dir = "transcripts"
         os.makedirs(transcript_dir, exist_ok=True)
-
         transcript_path = os.path.join(transcript_dir, f"{base_name}.txt")
-
-    
-
-    return json_path, transcript_path
+    return transcript_path
 
 # --- Output Functions ---
 
@@ -477,115 +451,42 @@ def get_llm_prompt_template():
     )
 
 
-def get_file_id(file_path):
-    import hashlib
-    if not os.path.exists(file_path): return ""
-    return hashlib.md5(f"{os.path.basename(file_path)}-{os.stat(file_path).st_size}".encode()).hexdigest()
-
-def is_speech_file_processed(output_dir, source_file, file_id):
-    if not os.path.exists(output_dir): return False
-    import json
-    for f in os.listdir(output_dir):
-        if f.endswith('.json') and f.startswith('analysis_'):
-            try:
-                data = json.load(open(os.path.join(output_dir, f), 'r', encoding='utf-8'))
-                if data.get('source_file') == source_file or data.get('file_id') == file_id:
-                    return True
-            except: pass
-    return False
-
-def process_and_analyze_file(file_path, model, json_path, transcript_path, is_text_file, verbose, file_id=None):
-
+def process_and_analyze_file(file_path, model, transcript_path, is_text_file, verbose):
     """
-
     Processes a single file (video or text) and outputs the analysis.
-
     Returns: dict with analysis results or None on error
-
     """
-
     filename = os.path.basename(file_path)
-
     transcript_text = ""
-
     if is_text_file:
-
         if verbose:
-
             print(f"Analyzing text file: {file_path}")
-
         try:
-
             with open(file_path, "r", encoding="utf-8") as f:
-
                 raw_text = f.read()
-
             transcript_text = clean_text_timestamps(raw_text)
-
         except Exception as e:
-
             print(f"Error reading text file: {e}", file=sys.stderr)
-
             return None
-
     else:
-
         transcript_text = transcribe_video(file_path, model, verbose)
-
         if transcript_text and transcript_path:
-
             with open(transcript_path, "w", encoding="utf-8") as f:
-
                 f.write(transcript_text)
-
             if verbose:
-
                 print(f"Transcription saved to: {transcript_path}")
-
     if not transcript_text or not transcript_text.strip():
-
         print("Error: No text to analyze.", file=sys.stderr)
-
         return None
-
     
-
-    # Perform analysis
-
     analysis_results = perform_speech_analysis(transcript_text)
-
     
-
-    # Build enhanced JSON structure
-
     final_json_output = {
-
-        "source_file": filename,
-        "file_id": file_id,
-
         "transcript": transcript_text,
-
-        **analysis_results  # Spreads: statistics, readability, filler_words, word_frequency
-
+        **analysis_results
     }
-
     
-
-    try:
-
-        with open(json_path, "w", encoding="utf-8") as f:
-
-            json.dump(final_json_output, f, indent=4)
-
-    except Exception as e:
-
-        print(f"Error saving JSON: {e}", file=sys.stderr)
-
-        return None
-
-    
-
-    return analysis_results
+    return final_json_output
 
 def main():
 
@@ -613,19 +514,13 @@ def main():
 
                        help='Display frequency graph (default: no graph)')
 
-    parser.add_argument('--output-dir', type=str, default='.',
-
-                       help='Output directory for results (default: current directory)')
-
+    parser.add_argument('--history', type=str, default='speech_analysis_history.json',
+                       help='Output history JSON file (default: speech_analysis_history.json)')
     parser.add_argument('--model', type=str, default='base',
-
                        choices=['tiny', 'base', 'small', 'medium', 'large'],
-
                        help='Whisper model size (default: base)')
-
-    parser.add_argument('--verbose', '-v', action='store_true',
-
-                       help='Show detailed output (default: minimal)')
+    parser.add_argument('--quiet', '-q', action='store_true',
+                       help='Disable verbose output (default: False)')
 
     parser.add_argument('--llm-prompt', action='store_true',
 
@@ -669,10 +564,10 @@ def main():
             print(f"No valid media files found.", file=sys.stderr)
             sys.exit(0)
 
-    if not args.verbose: warnings.filterwarnings('ignore')
+    if args.quiet: warnings.filterwarnings('ignore')
     setup_nltk()
 
-    if args.verbose: print(f"Loading Whisper model '{args.model}'...")
+    if not args.quiet: print(f"Loading Whisper model '{args.model}'...")
     try:
         model = whisper.load_model(args.model)
     except Exception as e:
@@ -683,22 +578,24 @@ def main():
     for current_file in files_to_process:
         file_id = get_file_id(current_file)
         fname = os.path.basename(current_file)
-        if is_speech_file_processed(args.output_dir, fname, file_id):
+        if is_file_processed(args.history, fname, file_id):
             print(f"Skipping '{fname}' (already processed with ID: {file_id}).")
             continue
             
         print(f"\nProcessing {fname}...")
         is_text = detect_file_type(current_file)
-        json_path, transcript_path = setup_output_paths(current_file, args.output_dir)
+        transcript_path = setup_transcript_path(current_file)
         
         analysis_results = process_and_analyze_file(
-            current_file, model, json_path, transcript_path,
-            is_text, args.verbose, file_id
+            current_file, model, transcript_path,
+            is_text, not args.quiet
         )
         if analysis_results is None: continue
         
-        if args.verbose: print_verbose_output(analysis_results, fname)
-        else: print_minimal_output(fname, json_path)
+        append_to_metrics(args.history, fname, file_id, analysis_results)
+        
+        if not args.quiet: print_verbose_output(analysis_results, fname)
+        else: print_minimal_output(fname, args.history)
         
         if args.graph: graphs_to_show.append((analysis_results['word_frequency'], fname))
 

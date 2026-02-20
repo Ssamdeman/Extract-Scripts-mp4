@@ -13,8 +13,8 @@ def get_file_id(file_path: str) -> str:
     unique_str = f"{path.name}-{file_stat.st_size}"
     return hashlib.md5(unique_str.encode()).hexdigest()
 
-def is_file_processed(history_file: str, file_id: str) -> bool:
-    """Checks if a file with the given file_id already exists in the JSON history."""
+def is_file_processed(history_file: str, source_file: str, file_id: str) -> bool:
+    """Checks if a file with the given source_file or file_id already exists in the JSON history."""
     path = Path(history_file)
     if not path.exists():
         return False
@@ -24,6 +24,8 @@ def is_file_processed(history_file: str, file_id: str) -> bool:
             if content.strip():
                 history = json.loads(content)
                 for entry in history:
+                    if entry.get("source_file") == source_file:
+                        return True
                     if entry.get("file_id") == file_id:
                         return True
     except json.JSONDecodeError:

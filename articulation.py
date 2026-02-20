@@ -44,7 +44,7 @@ def main(
 
     for current_file in files_to_process:
         file_id = get_file_id(str(current_file))
-        if is_file_processed(history_file, file_id):
+        if is_file_processed(history_file, current_file.name, file_id):
             typer.secho(f"Skipping '{current_file.name}' (already processed with ID: {file_id}).", fg=typer.colors.YELLOW)
             continue
             

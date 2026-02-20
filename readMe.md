@@ -155,44 +155,6 @@ The tool always creates a JSON file with complete analysis:
 python speech_analysis.py --llm-prompt
 ```
 
-## 📁 File Organization
-
-```
-project/
-├── speech_analysis.py   # Speech Analysis script
-├── articulation.py      # Mobility Tracking script
-├── mp4-script/          # Virtual environment
-│   └── bin/activate
-├── transcripts/         # Video transcripts (auto-created)
-└── analysis_*.json      # Analysis results
-```
-
-## 🔧 Troubleshooting
-
-### Python not found
-
-Make sure you are running the tools with `python <script_name>.py`. If it still fails, ensure your virtual environment is activated.
-
-### FFmpeg not found
-
-Install FFmpeg:
-
-- **Mac**: `brew install ffmpeg`
-- **Ubuntu**: `sudo apt install ffmpeg`
-- **Windows**: Download from [ffmpeg.org](https://ffmpeg.org/)
-
-### NLTK data missing
-
-The script auto-downloads required data on first run, but you can manually install:
-
-```python
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('punkt_tab')
-```
-
-## 📝 Notes
 
 - **First run**: NLTK will download required language data automatically
 - **Model sizes**: Larger models are more accurate but slower
@@ -229,7 +191,7 @@ python speech_analysis.py presentation.mp4 -v --graph --model small
 
 ## 📄 Version
 
-Current version: 2.0.0
+Current version: 3.0.0
 
 ## 👤 Author
 
