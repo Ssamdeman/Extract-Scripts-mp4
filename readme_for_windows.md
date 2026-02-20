@@ -1,4 +1,4 @@
-# 🎙️ Speech Analysis & Articulation Suite - Windows Guide
+﻿# 🎙️ Speech Analysis & Articulation Suite - Windows Guide
 
 A dual-purpose command-line suite that helps improve public speaking skills through transcription analysis and acoustic articulation tracking.
 
@@ -6,7 +6,7 @@ A dual-purpose command-line suite that helps improve public speaking skills thro
 
 The suite contains two distinct tools:
 
-**1. Speech Analysis (`main.py`)**
+**1. Speech Analysis (`speech_analysis.py`)**
 - **Video & Text Support**: Analyze `.mp4`, `.mov`, `.mkv` videos or existing `.txt` transcripts
 - **Automatic Transcription**: Uses Whisper AI to convert speech to text
 - **Speech Statistics**: Word counts, unique words, filler word usage percentage
@@ -18,6 +18,7 @@ The suite contains two distinct tools:
 - **Multiple Model Sizes**: Choose from tiny/base/small/medium/large Whisper models
 
 **2. Articulation & Mobility Tracking (`articulation.py`)**
+Tracks your physical speaking attributes and records daily metric trends (Accepts any media file: `.mp4`, `.mov`, `.mkv`, `.wav`, `.mp3`).
 - **Acoustic Feature Extraction**: Uses `opensmile` to measure jaw and tongue mobility (F1/F2 Standard Deviation).
 - **Voice Clarity**: Calculates Harmonics-to-Noise Ratio (HNR).
 - **Speech Rate**: Syllables-per-second tracking using `faster-whisper` and `syllables`.
@@ -66,22 +67,22 @@ pip install -r requirements.txt
 
 Run the tool specifically using the `python` command.
 
-### Tool 1: Speech Analysis (`main.py`)
+### Tool 1: Speech Analysis (`speech_analysis.py`)
 
 Primary tool for transcripts, filler words, and readability.
 
 ```powershell
 # Analyze a video file
-python main.py video.mp4
+python speech_analysis.py video.mp4
 
 # Analyze an existing transcript
-python main.py transcript.txt
+python speech_analysis.py transcript.txt
 
 # Show word frequency graph & better Whisper model
-python main.py video.mp4 --graph --model small
+python speech_analysis.py video.mp4 --graph --model small
 ```
 
-**Available Flags (`main.py`)**
+**Available Flags (`speech_analysis.py`)**
 
 | Flag                | Description                                                        |
 | ------------------- | ------------------------------------------------------------------ |
@@ -98,11 +99,11 @@ python main.py video.mp4 --graph --model small
 Secondary tool for tracking physical jaw/tongue mobility and weak words. Appends all metrics to `metrics_history.json`.
 
 ```powershell
-# Analyze a daily video
-python articulation.py analyze video.mp4
+# Analyze a daily video or audio file (.mp4, .mov, .mkv, .wav, .mp3)
+python articulation.py video.mp4
 
-# Analyze and specify custom history JSON file
-python articulation.py analyze video.mp4 --history .\custom_history.json
+# Track history dynamically
+python articulation.py test.mp3 --history .\custom_history.json
 ```
 
 ## 📊 Output
@@ -120,7 +121,7 @@ The tool creates a JSON file containing the full analysis (transcription, filler
 Generate a prompt to use with ChatGPT or Claude to get feedback on your speech:
 
 ```powershell
-python main.py --llm-prompt
+python speech_analysis.py --llm-prompt
 ```
 
 ## 🔧 Troubleshooting

@@ -14,12 +14,12 @@ def evaluate_transcription(audio_path: str, conf_threshold: float, pause_thresho
     Runs faster-whisper on the audio to get text, word confidences, and timestamps.
     Calculates weak words, pause counts, average pause duration, and speech rate.
     """
-    logger.info("Loading faster-whisper model (large-v3, falling back to CPU if CUDA missing)...")
+    logger.info("Loading faster-whisper model ('base' via CPU to prevent CUDA errors)...")
     try:
-        model = WhisperModel("large-v3", device="cuda", compute_type="float16")
+        model = WhisperModel("base", device="cpu", compute_type="int8")
     except Exception as e:
-        logger.warning(f"Failed to load Whisper on CUDA: {e}. Falling back to CPU...")
-        model = WhisperModel("large-v3", device="cpu", compute_type="int8")
+        logger.warning(f"Failed to load Whisper on CPU: {e}")
+        raise e
 
     logger.info(f"Transcribing {audio_path}...")
     segments_generator, info = model.transcribe(audio_path, word_timestamps=True, language="en")

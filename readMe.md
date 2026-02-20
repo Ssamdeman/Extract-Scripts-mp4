@@ -1,4 +1,4 @@
-# 🎙️ Speech Analysis & Articulation Suite
+﻿# 🎙️ Speech Analysis & Articulation Suite
 
 A dual-purpose command-line suite that helps improve public speaking skills through transcription analysis and acoustic articulation tracking.
 
@@ -6,7 +6,7 @@ A dual-purpose command-line suite that helps improve public speaking skills thro
 
 The suite contains two distinct tools:
 
-**1. Speech Analysis (`main.py`)**
+**1. Speech Analysis (`speech_analysis.py`)**
 - **Video & Text Support**: Analyze `.mp4`, `.mov`, `.mkv` videos or existing `.txt` transcripts
 - **Automatic Transcription**: Uses Whisper AI to convert speech to text
 - **Speech Statistics**: Word counts, unique words, filler word usage percentage
@@ -18,6 +18,7 @@ The suite contains two distinct tools:
 - **Multiple Model Sizes**: Choose from tiny/base/small/medium/large Whisper models
 
 **2. Articulation & Mobility Tracking (`articulation.py`)**
+Tracks your physical speaking attributes and records daily metric trends (Accepts any media file: `.mp4`, `.mov`, `.mkv`, `.wav`, `.mp3`).
 - **Acoustic Feature Extraction**: Uses `opensmile` to measure jaw and tongue mobility (F1/F2 Standard Deviation).
 - **Voice Clarity**: Calculates Harmonics-to-Noise Ratio (HNR).
 - **Speech Rate**: Syllables-per-second tracking using `faster-whisper` and `syllables`.
@@ -50,47 +51,28 @@ pip install -r requirements.txt
 ### 3. Make the script executable
 
 ```bash
-chmod +x main.py
-```
-
-### 4. Create command-line tool (optional but recommended)
-
-```bash
-# Create wrapper script
-cat > speech_analysis << 'EOF'
-#!/bin/bash
-source /full/path/to/mp4-script/bin/activate
-python /full/path/to/main.py "$@"
-EOF
-
-chmod +x speech_analysis
-
-# Create symlink in user bin
-mkdir -p ~/.local/bin
-ln -sf /full/path/to/speech_analysis ~/.local/bin/speech_analysis
-
-# Add to PATH (add this to ~/.zshrc or ~/.bashrc)
-export PATH="$HOME/.local/bin:$PATH"
+chmod +x speech_analysis.py
+chmod +x articulation.py
 ```
 
 ## 💻 Usage
 
-### Tool 1: Speech Analysis (`main.py`)
+### Tool 1: Speech Analysis (`speech_analysis.py`)
 
 Primary tool for transcripts, filler words, and readability.
 
 ```bash
 # Analyze a video
-python main.py video.mp4
+python speech_analysis.py video.mp4
 
 # Analyze an existing transcript
-python main.py transcript.txt
+python speech_analysis.py transcript.txt
 
 # Show word frequency graph and use better Whisper model
-python main.py video.mp4 --graph --model small
+python speech_analysis.py video.mp4 --graph --model small
 ```
 
-**Available Flags (`main.py`)**
+**Available Flags (`speech_analysis.py`)**
 
 | Flag                | Description                                                        |
 | ------------------- | ------------------------------------------------------------------ |
@@ -107,11 +89,11 @@ python main.py video.mp4 --graph --model small
 Secondary tool for tracking physical jaw/tongue mobility and weak words. Appends all metrics to `metrics_history.json`.
 
 ```bash
-# Analyze a daily video
-python articulation.py analyze video.mp4
+# Analyze a daily video or audio file (.mp4, .mov, .mkv, .wav, .mp3)
+python articulation.py video.mp4
 
-# Analyze and specify custom history JSON file
-python articulation.py analyze video.mp4 --history ./custom_history.json
+# Track history dynamically
+python articulation.py test.mp3 --history ./custom_history.json
 ```
 
 ## 📊 Output
@@ -170,15 +152,15 @@ The tool always creates a JSON file with complete analysis:
 ### Step 1: Get the prompt template
 
 ```bash
-speech_analysis --llm-prompt
+python speech_analysis.py --llm-prompt
 ```
 
 ## 📁 File Organization
 
 ```
 project/
-├── main.py              # Main script
-├── speech_analysis      # Wrapper script
+├── speech_analysis.py   # Speech Analysis script
+├── articulation.py      # Mobility Tracking script
 ├── mp4-script/          # Virtual environment
 │   └── bin/activate
 ├── transcripts/         # Video transcripts (auto-created)
@@ -187,13 +169,9 @@ project/
 
 ## 🔧 Troubleshooting
 
-### "Command not found: speech_analysis"
+### Python not found
 
-Make sure `~/.local/bin` is in your PATH:
-
-```bash
-export PATH="$HOME/.local/bin:$PATH"
-```
+Make sure you are running the tools with `python <script_name>.py`. If it still fails, ensure your virtual environment is activated.
 
 ### FFmpeg not found
 
@@ -231,7 +209,7 @@ nltk.download('punkt_tab')
 ```bash
 # Analyze multiple files
 for file in *.mp4; do
-  speech_analysis "$file" --output-dir ./batch_results
+  python speech_analysis.py "$file" --output-dir ./batch_results
 done
 ```
 
@@ -239,14 +217,14 @@ done
 
 ```bash
 # Fast analysis with tiny model
-speech_analysis lecture.mp4 --model tiny --output-dir ~/tmp
+python speech_analysis.py lecture.mp4 --model tiny --output-dir ~/tmp
 ```
 
 ### Detailed Review
 
 ```bash
 # Full verbose output with visualization
-speech_analysis presentation.mp4 -v --graph --model small
+python speech_analysis.py presentation.mp4 -v --graph --model small
 ```
 
 ## 📄 Version

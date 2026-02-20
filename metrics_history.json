@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-02-20T14:40:49.769001",
+    "source_file": "North Dorchester.m4a",
+    "metrics": {
+      "text": "This is my testing environment. I want to test my voice on readings. I want to see  how it sounds like and what kind of score I get and see if it works properly. I  need to test it. So I'm working on it. All right.",
+      "word_count": 46,
+      "weak_words": [
+        {
+          "word": "my",
+          "start": 3.64,
+          "end": 5.84,
+          "probability": 0.5963671207427979
+        },
+        {
+          "word": "on",
+          "start": 6.16,
+          "end": 6.34,
+          "probability": 0.6068190336227417
+        },
+        {
+          "word": "to",
+          "start": 13.54,
+          "end": 13.66,
+          "probability": 0.6081518530845642
+        },
+        {
+          "word": "All",
+          "start": 15.34,
+          "end": 15.4,
+          "probability": 0.550165593624115
+        }
+      ],
+      "pause_count": 2,
+      "avg_pause_duration_sec": 0.73,
+      "speech_rate_sps": 4.25,
+      "f1_variance_sd": 210.63,
+      "f2_variance_sd": 301.15,
+      "mean_hnr": 4.83
+    }
+  }
+]

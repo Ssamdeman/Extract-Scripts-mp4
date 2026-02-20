@@ -1,6 +1,7 @@
 mp4-script/bin/*
 mp4-script/lib/*
 video_files/*
+/resources/*
 mp4-script/bin/activate.csh
 mp4-script/bin/activate.fish
 mp4-script/bin/Activate.ps1

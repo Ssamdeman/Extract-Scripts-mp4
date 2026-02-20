@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 app = typer.Typer(help="Articulation Analysis CLI")
 
 @app.command()
-def analyze(
+def main(
     input_file: Path = typer.Argument(..., help="Path to the audio/video file to analyze"),
     history_file: str = typer.Option("metrics_history.json", "--history", "-h", help="Path to the JSON history file to append to")
 ):

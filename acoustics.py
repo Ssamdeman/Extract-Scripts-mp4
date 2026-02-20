@@ -34,7 +34,7 @@ def evaluate_acoustics(audio_path: str) -> Dict[str, float]:
     f0_col = "F0semitoneFrom27.5Hz_sma3nz"
     f1_col = "F1frequency_sma3nz"
     f2_col = "F2frequency_sma3nz"
-    hnr_col = "HarmonicToNoiseRatio_sma3nz"
+    hnr_col = "HNRdBACF_sma3nz"
     
     # Filter voiced frames: frames where F0 (pitch) > 0 and F1/F2 > 0
     # Unvoiced frames usually have 0 or very low values for F1/F2 in opensmile
