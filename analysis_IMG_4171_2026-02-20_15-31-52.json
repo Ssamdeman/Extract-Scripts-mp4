@@ -1,0 +1,81 @@
+{
+    "source_file": "IMG_4171.MOV",
+    "file_id": "47ed1dae6a4ddf68c16a8e6a3993ffd9",
+    "transcript": "That makes sense. Why I was wondering why it's so dark every day.\nHello. This is part of my speech feedback or speech learning stuff.\nMy speech analysis tools testing, any testing.\nSo yeah.\nI am...\nI think I heard myself so I am trying to give a massage.\nA little warm massage.\nThat's a sacrifice I did.\nThis is stressful now.\nLike washing more.\nWay more.\nThat's all.\nStop.",
+    "statistics": {
+        "total_words": 70,
+        "unique_words": 49,
+        "total_filler_words": 4,
+        "filler_word_percentage": 5.71
+    },
+    "readability": {
+        "score": 2.95,
+        "interpretation": "Elementary school level (easy to understand)"
+    },
+    "filler_words": {
+        "so": 3,
+        "like": 1
+    },
+    "word_frequency": [
+        [
+            "speech",
+            3
+        ],
+        [
+            "testing",
+            2
+        ],
+        [
+            "massage",
+            2
+        ],
+        [
+            "thats",
+            2
+        ],
+        [
+            "makes",
+            1
+        ],
+        [
+            "sense",
+            1
+        ],
+        [
+            "wondering",
+            1
+        ],
+        [
+            "dark",
+            1
+        ],
+        [
+            "every",
+            1
+        ],
+        [
+            "day",
+            1
+        ],
+        [
+            "hello",
+            1
+        ],
+        [
+            "part",
+            1
+        ],
+        [
+            "feedback",
+            1
+        ],
+        [
+            "learning",
+            1
+        ],
+        [
+            "stuff",
+            1
+        ]
+    ]
+}
