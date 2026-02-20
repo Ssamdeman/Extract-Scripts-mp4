@@ -1,0 +1,11 @@
+opensmile
+faster-whisper
+syllables
+typer
+pandas
+numpy
+ffmpeg-python
+openai-whisper
+nltk
+matplotlib
+textstat

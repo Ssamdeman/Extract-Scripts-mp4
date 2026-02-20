@@ -1,9 +1,12 @@
-# 🎙️ Speech Analysis Tool
+# 🎙️ Speech Analysis & Articulation Suite
 
-A command-line tool that transcribes video/audio files using OpenAI's Whisper and analyzes speech patterns to help improve public speaking skills.
+A dual-purpose command-line suite that helps improve public speaking skills through transcription analysis and acoustic articulation tracking.
 
 ## ✨ Features
 
+The suite contains two distinct tools:
+
+**1. Speech Analysis (`main.py`)**
 - **Video & Text Support**: Analyze `.mp4`, `.mov`, `.mkv` videos or existing `.txt` transcripts
 - **Automatic Transcription**: Uses Whisper AI to convert speech to text
 - **Speech Statistics**: Word counts, unique words, filler word usage percentage
@@ -13,6 +16,13 @@ A command-line tool that transcribes video/audio files using OpenAI's Whisper an
 - **JSON Output**: Structured data perfect for feeding into LLMs for deeper analysis
 - **Optional Visualization**: Bar chart of word frequency (opt-in with `--graph`)
 - **Multiple Model Sizes**: Choose from tiny/base/small/medium/large Whisper models
+
+**2. Articulation & Mobility Tracking (`articulation.py`)**
+- **Acoustic Feature Extraction**: Uses `opensmile` to measure jaw and tongue mobility (F1/F2 Standard Deviation).
+- **Voice Clarity**: Calculates Harmonics-to-Noise Ratio (HNR).
+- **Speech Rate**: Syllables-per-second tracking using `faster-whisper` and `syllables`.
+- **Weak Words**: Identifies mumbled or poorly articulated words based on Whisper confidence scores over active speech.
+- **Progress Tracking**: Appends records directly to a single `metrics_history.json` for daily trend monitoring.
 
 ## 📋 Requirements
 
@@ -34,7 +44,7 @@ source mp4-script/bin/activate  # On Windows: mp4-script\Scripts\activate
 
 ```bash
 pip install --upgrade pip
-pip install openai-whisper nltk matplotlib textstat
+pip install -r requirements.txt
 ```
 
 ### 3. Make the script executable
@@ -65,36 +75,22 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ## 💻 Usage
 
-### Basic Usage
+### Tool 1: Speech Analysis (`main.py`)
+
+Primary tool for transcripts, filler words, and readability.
 
 ```bash
 # Analyze a video
-speech_analysis video.mp4
+python main.py video.mp4
 
 # Analyze an existing transcript
-speech_analysis transcript.txt
+python main.py transcript.txt
+
+# Show word frequency graph and use better Whisper model
+python main.py video.mp4 --graph --model small
 ```
 
-### Advanced Options
-
-```bash
-# Show word frequency graph
-speech_analysis video.mp4 --graph
-
-# Use better Whisper model
-speech_analysis video.mp4 --model small
-
-# Verbose output with details
-speech_analysis video.mp4 --verbose
-
-# Custom output directory
-speech_analysis video.mp4 --output-dir ~/analysis_results
-
-# Combine options
-speech_analysis speech.mp4 --model medium --graph -v --output-dir ./results
-```
-
-### Available Flags
+**Available Flags (`main.py`)**
 
 | Flag                | Description                                                        |
 | ------------------- | ------------------------------------------------------------------ |
@@ -104,6 +100,19 @@ speech_analysis speech.mp4 --model medium --graph -v --output-dir ./results
 | `--verbose`, `-v`   | Show detailed analysis output                                      |
 | `--llm-prompt`      | Print LLM prompt template (for copying to AI assistants)           |
 | `--version`         | Show version number                                                |
+
+
+### Tool 2: Audio Articulation Tracker (`articulation.py`)
+
+Secondary tool for tracking physical jaw/tongue mobility and weak words. Appends all metrics to `metrics_history.json`.
+
+```bash
+# Analyze a daily video
+python articulation.py analyze video.mp4
+
+# Analyze and specify custom history JSON file
+python articulation.py analyze video.mp4 --history ./custom_history.json
+```
 
 ## 📊 Output
 
