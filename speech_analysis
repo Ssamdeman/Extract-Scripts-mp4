@@ -1,8 +1,0 @@
-#!/bin/bash
-# Speech Analysis Tool Wrapper
-
-# Activate virtual environment
-source /Users/sultansamid/Documents/GitHub/allCodings/projects/Extract-Scripts-mp4/mp4-script/bin/activate
-
-# Run the Python script with all arguments
-python /Users/sultansamid/Documents/GitHub/allCodings/projects/Extract-Scripts-mp4/main.py "$@"
