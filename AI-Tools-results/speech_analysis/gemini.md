@@ -11,6 +11,7 @@ Three data sources below:
 3. MY SELF-REVIEW NOTES:
 [paste your manual notes]
 
+
 Rules:
 - Be short. No fluff.
 - Grade me on: structure, clarity, articulation, delivery, body language

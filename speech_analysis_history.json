@@ -1,84 +1,87 @@
 [
   {
-    "date": "2026-02-20T16:30:58.820961",
-    "source_file": "IMG_4171.MOV",
-    "file_id": "47ed1dae6a4ddf68c16a8e6a3993ffd9",
+    "date": "2026-02-25T21:01:49.211533",
+    "source_file": "IMG_4231.MOV",
+    "file_id": "ab46b2c90b19ad2338d22714e125b090",
     "metrics": {
-      "transcript": "That makes sense. Why I was wondering why it's so dark every day.\nHello. This is part of my speech feedback or speech learning stuff.\nMy speech analysis tools testing, any testing.\nSo yeah.\nI am...\nI think I heard myself so I am trying to give a massage.\nA little warm massage.\nThat's a sacrifice I did.\nThis is stressful now.\nLike washing more.\nWay more.\nThat's all.\nStop.",
+      "transcript": "Hello, today's topic is one of guess winter blizzards.\nRight now I'm in north eastern of US and we are experiencing a blizzard.\nThis is one of the few times we had blizzards since 2015.\nSo it might set a new record of how much snow will have in the city at the end of it.\nThings about blizzards that I didn't know, number one, blizzards are unexpectedly fast.\nI know, I know, it seems like what blizzards mean something but if you never experience it,\nyou really don't know what the blizzard is.\nSo when I heard it's a blizzard, I thought to myself, winter, that was my idea.\nBut and today morning I walked out and opened the window, opened the door and I was like,\nholy fuck, this is blizzard.\nFirst time I understood what the blizzard means in the context of living and saying,\nsecond, it's really windy.\nI would not expect that to be that much wind.\nI expect it to be just a lot of snow, non-stop, but what makes it a war is just wind.\nIt's not just wind, it's a gust of wind from...\nNo.\nLeft to right, side to side, up and down too, actually.\nIt is crazy.\nWhen you look at it, you're like, wow, that's the wind.\nAnd you can visit the sea because the snow goes with it and you're like, wow, that's wind.\nI knew what the wind is but on a blizzard term, it's hard to, it's really impressive.\nAnd third one, how are we all fucked?\nJust by cities having, at least my city having constant big vehicles that are clearing the roads,\nI forget the name of it, but big trouble or an oomph.\nIt opens the road, right?\nThey've been working since last night and then it doesn't look like they've been doing\nshit because the roads are already snowed like that.\nYou don't see the road, you just see that snow pile up that up.\nI'm like, wow, that's crazy.\nAnd they think we're going to drive tomorrow?\nI don't know.\nSo, that despite all the resources that our city put it in, to keep the...\nThe kids are working as a road, it seems like hard to do because the snow is going\nso far as we're going to pile up, soft up.\nYou're like, wow, there's no way I can mess this shit all the way.\nIt is crazy how snowy we are.\nThere's a two type of blizzard.\nThere's a lot of type that I want to talk about in the two.\nNumber one is the mountain blizzard.\nBlizzard is basically the same thing, but much more extreme in the mountains, obviously.\nThis fact, not that much interesting, but it's good to know that we have mountains and\nmountains.\nYou can have their own blizzard timing.\nAnd we have specifically...\nThe second time is a specific four northeastern.\nThere's a northeastern cycle blizzard.\nIt means that just a big cloud from cyclone basically comes in and just swaps area, creating\nblizzard conditions and making it impossible to live.\nAnd it's crazy.\nOne more thing that I really want to emphasize today is that we talk about winter or\nblizzard, or we know it.\nYou heard of it.\nYou understand the definition of it, but if you never experience it, you don't know what\nit is.\nSometimes we complain sort of stuff, but in order to really tell that we really show\nthat we know something, we have to experience some degree.\nI think there's a big difference between understanding the words or concepts behind it,\nbut also experiencing it is completely different.\nThe same way I felt buffled by the blizzard, the experience of having a blizzard weather\nright now, it just blew my mind.\nThat is all.\nBye.",
       "statistics": {
-        "total_words": 70,
-        "unique_words": 49,
-        "total_filler_words": 4,
-        "filler_word_percentage": 5.71
+        "total_words": 638,
+        "unique_words": 229,
+        "total_filler_words": 20,
+        "filler_word_percentage": 3.13
       },
       "readability": {
-        "score": 2.95,
+        "score": 5.1,
         "interpretation": "Elementary school level (easy to understand)"
       },
       "filler_words": {
-        "so": 3,
-        "like": 1
+        "right": 4,
+        "so": 4,
+        "like": 9,
+        "actually": 1,
+        "basically": 2
       },
       "word_frequency": [
         [
-          "speech",
-          3
+          "blizzard",
+          15
         ],
         [
-          "testing",
-          2
+          "know",
+          9
         ],
         [
-          "massage",
-          2
+          "like",
+          9
         ],
         [
-          "thats",
-          2
+          "wind",
+          7
         ],
         [
-          "makes",
-          1
+          "one",
+          6
         ],
         [
-          "sense",
-          1
+          "really",
+          6
         ],
         [
-          "wondering",
-          1
+          "blizzards",
+          5
         ],
         [
-          "dark",
-          1
+          "snow",
+          5
         ],
         [
-          "every",
-          1
+          "theres",
+          5
         ],
         [
-          "day",
-          1
+          "right",
+          4
         ],
         [
-          "hello",
-          1
+          "much",
+          4
         ],
         [
-          "part",
-          1
+          "experience",
+          4
         ],
         [
-          "feedback",
-          1
+          "dont",
+          4
         ],
         [
-          "learning",
-          1
+          "crazy",
+          4
         ],
         [
-          "stuff",
-          1
+          "wow",
+          4
         ]
       ]
     }
