@@ -29,3 +29,41 @@ For your next 5-minute talk, you are **forbidden** from looking away from the ca
 
 > **Log:** Framework followed correctly; focus now shifts from *what* is said to *how* it is projected—specifically eye-contact discipline.
 
+
+
+
+----------------------------------------------------------------------
+
+
+## Speech Coach Review: "The Sock Metaphor"
+
+### **Grades**
+
+* **Structure:** **B-** (Clear "Rule of Three" attempt; strong transition from utility to metaphor).
+* **Clarity:** **C** (Phonetic confusion between "socks" and "sucks" significantly clouds the message).
+* **Articulation:** **D+** (Low probability on key words; "socks" often rendered as "sucks" or "size").
+* **Delivery:** **F** (Self-identified as monotone and "sleep-inducing"; lacks vocal variety).
+* **Body Language:** **D** (Eye avoidance and excessive blinking during "thought retrieval" breaks the audience connection).
+
+---
+
+### **The ONE Biggest Problem**
+
+**Visual & Vocal Disconnection:** You are "disappearing" from the conversation while thinking. By closing your eyes, looking away, and maintaining a monotone drone, you stop performing and start simply reciting a mental list.
+
+---
+
+### **ONE Specific Drill for Next Time**
+
+**"The Sticky-Note Target":**
+Place a small sticky note with a smiley face right next to your camera lens.
+
+* **The Rule:** You are not allowed to speak unless you are looking at the smiley face.
+* **The Goal:** If you need to think, **stop talking**, look away to gather your thoughts in silence, then return your eyes to the "target" before you resume speaking. This eliminates the "thinking-eye-roll" and blinking habits.
+
+---
+
+### **Progress Log**
+
+> **2026-02-27:** Successfully applied the "Rule of Three" framework to a creative metaphor, but needs to bridge the gap between "thinking" and "performing."
+

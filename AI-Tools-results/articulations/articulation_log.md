@@ -35,3 +35,19 @@ Here is the breakdown of your session.
 
 **Log Note**
 `2026-02-24: 30m pen drill. High pause count (125) and slurred affricates/multisyllabics; need to actively drive the tongue tip over the pen obstruction.`
+
+
+
+**Weak Words & Mechanical Issues**
+
+* **The Words:** *Husband, impossible, technicality, international, entrepreneurs.*
+* **The Why:** Bilabial sounds (**m, p, b**) are failing because the pen prevents full lip closure, leading to "air leaks" and slurred consonants. Multi-syllabic words are dropping in probability because your tongue is "short-cutting" the middle syllables to reach the end of the word faster.
+
+**Comparison**
+Your **pause count dropped significantly** (125 down to 95), meaning your breath control and rhythm are improving. however, your word accuracy on complex terms remains low. You are moving faster but becoming less precise.
+
+**Tomorrow's Focus**
+**Exaggerated Lip Movement.** Focus entirely on wrapping your lips around the sounds, especially for words starting or ending with M, P, or B. Force the labial closure even with the pen in the way.
+
+**Log Note**
+`2026-02-26: 30m pen drill. Pauses improved (-30); flow is better, but precision on bilabials (m/p/b) and complex middle syllables needs exaggerated lip work.`

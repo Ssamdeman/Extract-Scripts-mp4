@@ -18,4 +18,24 @@
             -  constant pace which is bad. it must have ups and downs to make story interesting. 
             -  running out of breath. 
             - story it self is confusing. I dont have structgure. I feel like I am all over the place. 
-    
+
+
+ "date": "2026-02-27T15:03:01.692006",
+    "source_file": "IMG_4273.MOV",
+    "file_id": "cf696226b5f36fc1905b50b2b1909b11",
+    1) Watch body — hands, posture, eyes
+    - looking too much around and not at the camera. 
+    - not looking at audience while I am making something new from my mind
+    - less hand movement
+    - my thinkning is not looking and avoiding the camera/audence while I am thinking what to say
+    - too much blinking when I am thinking what to say and always looking right up. 
+    - better imrpovent like less hand movement toward the end
+    - bad habit of closehting my eyes and thinking and say thing staff. 
+
+    2) (eyes closed): Listen — pace, tone, fillers, thought completion
+    - monotone and nothing exiting in my voice. constant same energy and tone.(bad)
+    - there is making fall a sleep. 
+    - bad story telling. I am lireally falling alssep while listening to myself. 
+    - 
+
+
