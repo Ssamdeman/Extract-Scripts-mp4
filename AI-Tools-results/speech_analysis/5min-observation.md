@@ -38,4 +38,18 @@
     - bad story telling. I am lireally falling alssep while listening to myself. 
     - 
 
+"date": "2026-03-02T13:07:02.191039",
+    "source_file": "IMG_4310.MOV",
+    "file_id": "b4953c16f5af59f56ecc614ee780fdf8",
+    1) Watch body — hands, posture, eyes
+    - I am again looking around even if my eyes are narrowed. narrowing it also gives away that I am thinking. it similar as my eye balls are moving around. 
+    - Hands are better than before. less hand movement.
+    - My facial expression is also not good. I look bored and not interested. no energy and no excitement. 
+    - I am not acting. I am just talking with boring face and boring voice and body too. It is making me sleepy.
+
+    2) (eyes closed): Listen — pace, tone, fillers, thought completion
+    - No strcuture in my story. I am all over the place. 
+    - Monotone voice. No ups and downs. 
+    - I am not acting. I am just talking with boring face and boring voice and body too. It is making me sleepy.
+    - still not pronouncing words properly.
 

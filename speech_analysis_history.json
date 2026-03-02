@@ -173,5 +173,89 @@
         ]
       ]
     }
+  },
+  {
+    "date": "2026-03-02T13:07:02.191039",
+    "source_file": "IMG_4310.MOV",
+    "file_id": "b4953c16f5af59f56ecc614ee780fdf8",
+    "metrics": {
+      "transcript": "Hello, hello. Today I want to talk about productivity. The thing about productivity is that it's complicated.\nWe try to solve it and make it real productive every day, but we fail. As humans we cannot be 100% proactive.\nIt means that being productive every day, every minute of your life.\nThis feeling of all I'm not doing and I wish I could do something is that failure being productive.\nProductivity has a different meaning for each different person.\nProductivity can be doing certain things right and my productivity to you is very different.\nI cannot be definition of what's productivity is or because it's on you.\nBut overall we can tell what is productivity is and you know when you are being productive and unproductive.\nIt just matters the fact that you are doing them.\nI should look at the camera and that something.\nIt's hard to come up with a speech on the air. Even I already thought some degrees I want to talk about it.\nIt's just really hard to just say stuff out of blue.\nI'm learning it first and I'm trying to figure out a fair more.\nI have good solid plans for this speech but these plans are not catered to fruition.\nI forgot most of my words after the first one.\nThe first was to explain productivity comes hard for everybody.\nNatural speaking, like we humans struggle being productive.\nSecond, definition of being productive is very vague and it's only independent.\nAnd that's not it.",
+      "statistics": {
+        "total_words": 253,
+        "unique_words": 124,
+        "total_filler_words": 2,
+        "filler_word_percentage": 0.79
+      },
+      "readability": {
+        "score": 6.81,
+        "interpretation": "Middle school level (accessible to most)"
+      },
+      "filler_words": {
+        "right": 1,
+        "like": 1
+      },
+      "word_frequency": [
+        [
+          "productivity",
+          8
+        ],
+        [
+          "productive",
+          6
+        ],
+        [
+          "every",
+          3
+        ],
+        [
+          "im",
+          3
+        ],
+        [
+          "different",
+          3
+        ],
+        [
+          "hard",
+          3
+        ],
+        [
+          "first",
+          3
+        ],
+        [
+          "hello",
+          2
+        ],
+        [
+          "want",
+          2
+        ],
+        [
+          "talk",
+          2
+        ],
+        [
+          "day",
+          2
+        ],
+        [
+          "humans",
+          2
+        ],
+        [
+          "something",
+          2
+        ],
+        [
+          "definition",
+          2
+        ],
+        [
+          "speech",
+          2
+        ]
+      ]
+    }
   }
 ]

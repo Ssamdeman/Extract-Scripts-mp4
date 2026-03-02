@@ -1,6 +1,52 @@
-Six minutes right before you pass out is still better than zero minutes. Your data definitely reflects the fatigue, though—your speech was breathy (low HNR), and you got stuck in a massive repetition loop at the end ("to try early or young or fun").
 
-Here is the breakdown of your session.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+## Weekly Articulation Review
+
+### 1. Weak Word Trend: Changing (Improving)
+
+Your weak words are **changing**, which is a positive sign. You’ve moved from basic lip closures (**m, p, b**) and simple tongue-tip strikes to complex multi-syllabic navigation (**evaluating, technicality**). You aren't "stuck" on one sound; you are uncovering deeper layers of obstruction as your coordination improves.
+
+### 2. $F_1/F_2$ SD Trend: Increasing Jaw Space
+
+The 3/02 report shows an $F_1$ variance of **211.47**. This high variance indicates you are starting to fight the pen by actively dropping your jaw to create resonance. Earlier sessions noted "lazy tongue" and "vowel blurring," but the rising $F_1$ variability suggests you are finally forcing the vertical space needed for clarity.
+
+### 3. HNR Trend: Rising Stability
+
+Your voice is getting **clearer**. You started the week "breathy" with "low HNR" due to fatigue. By 3/02, your HNR reached **4.53**. While still low (standard for pen-drills), the shift from breathy/slurred to a measurable baseline shows better vocal fold engagement and breath support.
+
+### 4. Speech Rate Trend: Rushing
+
+You are **rushing**. Your pause count dropped significantly (125 down to 95), and your rate reached **3.1 SPS**. This increased speed is currently the "enemy" of your precision; it is causing the syllable collapse seen in your 3/02 multi-syllabic failures.
+
+---
+
+### Focus for Next Week
+
+**Decelerate to 2.5 SPS.** Prioritize finishing every single syllable of multi-syllabic words over maintaining a "natural" reading flow; speed is currently masking technical errors.
+
+**Weekly Progress Note:**
+`Week Review: Transitioned from bilabial weakness to multi-syllabic vowel clarity; HNR and jaw variance ($F_1$) trending up, but SPS (3.1) is too high for precision—must slow down.`
+
+
+
+
 
 ### Weak Words & Mechanics
 
@@ -19,7 +65,7 @@ Here is the breakdown of your session.
 ### Progress Note for Log
 
 `2/23 - 6 mins (pre-sleep). High fatigue slurred lip closures (m/p/b) and tongue-tip stretches (t/d/l). Next focus: Tongue isolation.`
-
+------------------------------------------------
 
 **Weak Words & Mechanical Issues**
 
@@ -36,7 +82,7 @@ Here is the breakdown of your session.
 **Log Note**
 `2026-02-24: 30m pen drill. High pause count (125) and slurred affricates/multisyllabics; need to actively drive the tongue tip over the pen obstruction.`
 
-
+-----------------------------------------------------------------------
 
 **Weak Words & Mechanical Issues**
 
@@ -51,3 +97,28 @@ Your **pause count dropped significantly** (125 down to 95), meaning your breath
 
 **Log Note**
 `2026-02-26: 30m pen drill. Pauses improved (-30); flow is better, but precision on bilabials (m/p/b) and complex middle syllables needs exaggerated lip work.`
+--------------------------------------------------------------------
+
+### Weak Words & Technical Causes
+
+Your probability scores indicate significant drops on multi-syllabic and "vowel-heavy" words.
+
+* **evaluating / physically / incapable:** These have extremely low confidence scores ($< 0.01$). This usually stems from **"vowel blurring."** With a pen in your mouth, your tongue often retreats rather than hitting the precise height needed for the "i" and "e" sounds, causing the syllables to collapse into one another.
+* **retirement / relocation / scenario:** These words failed repeatedly. The **"r" sound** requires the sides of the tongue to touch the upper molars. The pen physically blocks this contact, leading to a "w" substitution or a muffled sound that confuses the analyzer.
+* **spoke / doubt / through:** These "stop" and "fricative" sounds are weak because you aren't building enough **intraoral air pressure** behind the pen. The air is leaking out the sides of your mouth instead of being released sharply.
+
+### Comparison
+
+Since no previous JSON was provided, this serves as your **Baseline Session**. Your speech rate of **3.1 syllables per second** is a bit fast for pen-in-mouth training.
+
+---
+
+### Focus for Tomorrow
+
+**Over-enunciate the Vowels.** Specifically, focus on opening your jaw wider than you think is necessary to "wrap" your speech around the pen. This will force your tongue to travel a greater distance and prevent the "syllable collapse" seen in words like *evaluating*.
+
+---
+
+### Progress Note
+
+**Log 2026-02-02:** Baseline established; word count 1094, SPS 3.1; primary weakness in multi-syllabic vowel clarity and "r" articulation.

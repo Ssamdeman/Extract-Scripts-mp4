@@ -67,3 +67,36 @@ Place a small sticky note with a smiley face right next to your camera lens.
 
 > **2026-02-27:** Successfully applied the "Rule of Three" framework to a creative metaphor, but needs to bridge the gap between "thinking" and "performing."
 
+---------
+### Performance Grades
+
+* **Structure: D-** | You started with a "Rule of Three" but admitted to forgetting the points halfway through. It became a meta-commentary on the difficulty of the speech rather than a speech on productivity.
+* **Clarity: C-** | High repetition of "productivity" (14x) and malapropisms (e.g., "catered to fruition" instead of "come to fruition") muddied the message.
+* **Articulation: C** | Your SPS (3.05) is too fast for your current coordination. Words like "productivity" and "proactive" are collapsing because your mouth isn't hitting the shapes.
+* **Delivery: F** | Your own review is correct: monotone, low energy, and "boring." Your HNR (3.0) confirms a breathy, unprojected voice.
+* **Body Language: D** | Narrowing eyes and scanning indicates you are "searching" for words in your head rather than connecting with the audience.
+
+-----------------------------------
+
+### The Biggest Problem
+
+**Cognitive Overload.** You are trying to build the house while moving in. Because you haven't internalized your points, 90% of your brainpower is going toward *remembering* the structure, leaving 10% for delivery, articulation, and eye contact.
+
+---
+
+### Focus for Next Recording: The "2-Second Reset"
+
+Before you start each new "point" (The 1st, 2nd, and 3rd), you must physically stop, look directly into the lens, and count to two in your head.
+
+**The Drill:**
+
+1. State your point.
+2. **Full stop.** (No "and," "like," or "uh").
+3. Reset your face (small smile or eyebrow lift).
+4. Begin the next point only when you have the first sentence ready.
+
+---
+
+### Progress Note
+
+**Log 2026-03-02:** Impromptu talk on Productivity; 3.05 SPS; Structure collapsed due to high cognitive load; Delivery was monotone/flat. Next focus: 2-second physical resets between points.
