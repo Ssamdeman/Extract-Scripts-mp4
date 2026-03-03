@@ -11,6 +11,31 @@
 
 
 
+## Session Analysis: March 3, 2026
+
+### Weak Words & Technical Causes
+
+Your probability scores dropped to near zero on words requiring back-of-tongue lifting and lip rounding.
+
+* **income / enough / diving / anything:** These velar and nasal transitions failed because you are moving too fast to lift the **back of the tongue** (for "ng" or "k") while the pen obstructs the front. They are coming out as flat, nasalized vowels.
+* **stars / armor / fear / former:** The **"R" coloring** remains your biggest technical hurdle. You are likely letting the tongue rest flat or press against the pen instead of curling the tip or flaring the sides toward your molars.
+* **who / waiting / five (5):** These require **lip rounding (w) or labiodental contact (f/v)**. The pen is currently acting as a crutch; you are speaking "through" it rather than "around" it with your lips.
+
+### Comparison
+
+You are **rushing significantly**. Your rate jumped from **3.1 SPS (yesterday) to 3.35 SPS (today)**. Consequently, your jaw opening ($F_1$ variance) dropped from 211 to 204. You are trading precision for volume, which is why words like "income" and "enough" are technically collapsing.
+
+---
+
+### Focus for Tomorrow
+
+**Force the "R" and "NG" closure.** Slow down enough to ensure the back of your tongue actually hits the roof of your mouth for every "NG" and that the sides of your tongue hit your top molars for every "R."
+
+---
+
+### Progress Note
+
+**Log 2026-03-03:** SPS peaked at 3.35 (rushing); precision failed on velar/nasal endings (ng/k) and "R" coloring. Next focus: Decelerate and force tongue-back contact.
 
 
 

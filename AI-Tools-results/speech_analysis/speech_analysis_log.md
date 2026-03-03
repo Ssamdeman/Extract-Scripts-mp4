@@ -1,4 +1,60 @@
-Damon, you’ve got the 3-2-1 framework down, but your delivery is currently fighting against your authority. You’re "thinking out loud" with your whole body instead of just your voice.
+
+
+### Performance Grades
+
+* **Structure: C-** | Improved narrative arc compared to the last session, but still leans into stream-of-consciousness rather than a rigid framework (3-2-1 or Rule of Three).
+* **Clarity: B-** | The message was emotionally honest and easy to follow, but vocabulary was repetitive ("burn out" 6x, "like" 10x).
+* **Articulation: D+** | Your SPS skyrocketed to **3.49**. You are rushing through syllables, causing words like *rigorous* (prob. 0.0009) to completely vanish.
+* **Delivery: C** | You captured the "passion vibes" you noted, but the "exhausted sighs" and low HNR (3.29) signal physical strain.
+* **Body Language: D-** | Slouching and shifting eyes indicate you are retreating into your head rather than projecting outward.
+
+---
+
+### The Biggest Problem
+
+**Velocity.** At **3.49 SPS**, you are speaking at a "panic pace." This speed is the root cause of your slouching (poor breath support) and your "thinking eyes" (your brain can't keep up with your mouth).
+
+---
+
+### Focus for Next Recording: The "Nose-Pause"
+
+After every single sentence, you must **close your mouth** and take one full breath through your **nose**.
+
+**The Drill:**
+
+1. Finish a sentence.
+2. Lips together.
+3. Inhale through the nose (this forces your spine to straighten and resets your focus).
+4. Look at the camera, then speak the next sentence.
+
+---
+
+### Progress Note
+
+**Log 2026-03-03:** Talk on Project Burnout; energy is better but pace is too fast (3.49 SPS); articulation and posture collapsed under speed. Next focus: Nose-breathing between sentences to force deceleration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### **Speech Report Card**
 

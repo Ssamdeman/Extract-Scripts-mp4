@@ -1,3 +1,52 @@
+
+
+"date": "2026-03-03T15:43:17.806697",
+    "source_file": "IMG_4360.MOV",
+    "file_id": "12cf64888f2fd61f3b8c88b6ef45a404"
+    1) Watch body — hands, posture, eyes
+    - still my eyes are not focused on the camera. and deadly give away that I am thinking. 
+    - my posture is not good. I am slouching. 
+    - I do a big exhasute sigh via mouth. and it is very visible. don do that
+    - it looks like I am  interested in this topic. it has the passion vvibes
+    -  I am still loking a side when I am thinking. 
+
+    2) (eyes closed): Listen — pace, tone, fillers, thought completion
+    - My voice is need to be articulate more. 
+    - I am not articulating my words properly. 
+    - better voice okay but not great. 
+    - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------
+
 "date":` "2026-02-25T21:01:49.211533",
     "source_file": "IMG_4231.MOV",
     "file_id": "ab46b2c90b19ad2338d22714e125b090"
