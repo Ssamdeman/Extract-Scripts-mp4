@@ -1,5 +1,6 @@
 
 
+----------------------------------------------------------------------------------------------
 
 
 
@@ -8,6 +9,127 @@
 
 
 
+
+
+
+## Weekly Articulation Review
+
+### 1. Weak Word Trend: Changing (Improving)
+
+Your weak words are **changing**. You have moved from "R" coloring and velar "NG" transitions (3/03) to glottal "H" starts and labiodental "F/V" fricatives (3/09). This rotation through different phoneme categories proves you are successfully identifying and partially correcting one mechanic before the next weakness is exposed.
+
+### 2. $F_1/F_2$ SD Trend: Jaw Opening More
+
+**Trend: Increasing.** You started the week at **204** (3/03) and ended at **225** (3/09), peaking at an aggressive **265**. You have successfully increased your vertical mouth space, though the final session shows you are finding a more sustainable middle ground.
+
+### 3. HNR Trend: Voice Getting Clearer
+
+**Trend: Improving.** Despite a brief crash during your high-mobility session (3.27), your HNR climbed from **4.43** to **5.19**. Your vocal resonance is becoming more efficient and less breathy as you get used to the pen.
+
+### 4. Speech Rate Trend: Stable (Rushing)
+
+**Trend: Rushing.** You are consistently hovering between **3.21 and 3.35 SPS**. You have not yet achieved the deceleration needed for technical precision. You are speaking at a "conversational" speed with a "drill" obstruction, which is causing the final consonant clipping.
+
+---
+
+### Focus for Next Week
+
+**Physical Velocity Caps.** Articulate every single syllable as a distinct, separate unit of time, sacrificing all "flow" to ensure the back of the tongue and the lower lip complete every contact.
+
+---
+
+### Progress Note
+
+**Weekly Review (March 3–9):** Jaw mobility ($F_1$) up 10%, HNR up 17%; weak words shifted from "R" to fricatives (F/S), but rate remains too high (3.2+ SPS).
+
+
+
+
+
+
+
+
+
+### Weak Words & Technical Causes
+
+Your lowest probability scores ($<0.10$) identify a total collapse of **Fricatives** and **Back-Tongue (Velar) Stops**.
+
+* **Force / Fear / Frankenstein:** These failed because of a lack of **labiodental contact**. To hit "F" or "V" with a pen in your mouth, you must aggressively pull your lower lip up to touch your upper teeth. You are likely blowing air over the pen instead.
+* **Sued / Misery / Sizzling:** These sibilants ("S" and "Z") are failing because you aren't directing the air over the **center of the tongue**. The pen is creating "lateral air leaks," turning your "S" into a muffled slush.
+* **Kick / Question / Insect:** These require the **back of the tongue** to hit the soft palate. At 3.21 SPS, you are skipping this physical contact to save time.
+
+### Comparison
+
+Your HNR (Clarity) recovered to **5.19** (up from 3.27 in the previous session), meaning your vocal resonance is stronger. However, your $F_1$ (jaw movement) dropped from 265 to **225**. You are becoming "tighter" and more resonant, but less mobile. You are still rushing (3.21 SPS vs. the ideal 2.5).
+
+---
+
+### Focus for Tomorrow
+
+**The Lower-Lip Bite.** Every time you see an "F" or "V" (e.g., *five, fail, forward*), physically bite your lower lip with your upper teeth. Do not allow the pen to stop this contact.
+
+---
+
+### Progress Note
+
+**Log 2026-03-09 (Session 3):** HNR stabilized at 5.19; jaw mobility ($F_1$) decreased as resonance improved; "F" and "S" sounds are the primary technical failures.
+
+Would you like me to generate a "Fricative-Focus" text for tomorrow’s lip-biting drill?
+
+
+### Weak Words & Technical Causes
+
+* **pulls / coupe / Denmark / nine:** These are your weakest links ($<0.05$).
+* **P/M (pulls, Denmark):** You are failing at **labial closure**. The pen is acting as a physical barrier you aren't fighting; you need to stretch your lips *around* the pen to seal the sound.
+* **N (nine, Denmark):** The **tongue tip** is hitting the pen instead of the alveolar ridge. This turns the "N" into a muffled vowel.
+* **K (coupe, Denmark):** Rushing is causing you to skip the **velar "k" click** at the back of the throat.
+
+
+
+### Comparison
+
+You are **over-driving the jaw**. Your $F_1$ variance spiked to **265.48** (up from 208 earlier today), but your HNR crashed to **3.27** (down from 5.65).
+
+* **Result:** You are moving your mouth much more, but you've become significantly **breathier and less precise**. You are trading vocal cord engagement for jaw movement.
+
+---
+
+### Focus for Tomorrow
+
+**Lip Sealing.** Ignore the tongue for one session. Focus 100% on making your upper and lower lips physically touch each other for every "M", "P", and "B" sound, even with the pen in the way.
+
+---
+
+### Progress Note
+
+**Log 2026-03-09 (Session 2):** Jaw movement ($F_1$) is at an all-time high, but clarity (HNR 3.27) and precision on nasals/plosives have regressed due to rushing.
+
+
+### Weak Words & Technical Causes
+
+Your lowest probability scores indicate failures in **glottal starts** and **velar closures**.
+
+* **Hans / His / He / High:** These failed critically ($<0.01$). You are losing intraoral air pressure on the **"H" aspirate**. Instead of a sharp burst of air from the throat, the pen is causing you to muffle the breath, making the word unrecognizable to the analyzer.
+* **Income / Sink / Action:** These **velar consonants (k, ng)** require the back of the tongue to hit the soft palate. You are "short-cutting" the back of the tongue to maintain speed, turning "income" into a nasalized vowel blur.
+* **That / Out / Around / Mid:** You are **dropping final consonants**. The pen locks your jaw, and you are choosing to move to the next word rather than forcing the tongue tip to hit the roof of the mouth for the final 't' or 'd'.
+
+### Comparison
+
+* **HNR (Voice Clarity):** Improved significantly to **5.65** (vs. 4.43 last session). Your resonance is much stronger and less breathy.
+* **Speech Rate:** You have decelerated slightly to **3.25 SPS** (from 3.35), but you are still faster than your 3.1 baseline. This "middle speed" is still causing you to clip word endings.
+* **Jaw Opening ($F_1$):** Stable at **208**. You are maintaining a consistent vertical stretch.
+
+---
+
+### Focus for Tomorrow
+
+**Final Consonant Percussion.** Treat every 'T', 'D', 'K', and 'G' at the **end** of a word like a drumbeat. Do not allow yourself to start the next word until you feel the physical "click" of the consonant behind the pen.
+
+---
+
+### Progress Note
+
+**Log 2026-03-09:** HNR reached a weekly high (5.65) showing better resonance; however, "H" starts and final consonants (T/D) are failing due to rushing at 3.25 SPS.
 
 
 
@@ -36,6 +158,32 @@ You are **rushing significantly**. Your rate jumped from **3.1 SPS (yesterday) t
 ### Progress Note
 
 **Log 2026-03-03:** SPS peaked at 3.35 (rushing); precision failed on velar/nasal endings (ng/k) and "R" coloring. Next focus: Decelerate and force tongue-back contact.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

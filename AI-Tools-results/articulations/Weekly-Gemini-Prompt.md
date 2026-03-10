@@ -1,4 +1,4 @@
-Here are my 7 daily articulation reports from this week. 
+Here are my 5-7 daily articulation reports from this week. 
 
 Tell me:
 1. Are my weak words repeating or changing? (repeating = stuck, changing = improving)
@@ -8,4 +8,4 @@ Tell me:
 5. One sentence: what to focus on next week
 
 Data:
-[paste all 7]
+[paste all 5-7]

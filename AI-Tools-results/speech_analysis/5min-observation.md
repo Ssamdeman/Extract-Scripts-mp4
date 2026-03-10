@@ -1,5 +1,41 @@
 
 
+
+ "date": "2026-03-09T18:13:57.487545",
+    "source_file": "IMG_4395.MOV",
+    "file_id": "9ce4d40f94fdfe4e4b2e8685fb865224",
+    1) Watch body — hands, posture, eyes
+    - skipped due to env conditions. 
+    2) (eyes closed): Listen — pace, tone, fillers, thought completion
+    - not articulating my words properly. rushinig and skipping letter. in words vowels and consonants are not clear. 
+    - no strucute in my story. I am all over the place. better staying in the subject but seems like I was not intended to be that way.
+
+
+
+
+
+"date": "2026-03-09T18:13:38.731060",
+    "source_file": "IMG_4374.MOV",
+    "file_id": "a2405c72fb5bf8008d0e4c77f78e79fc"
+    1) Watch body — hands, posture, eyes
+    - Closing my eyes while I am thinking. 
+    - Good expression on my face. 
+    - Wierd head movement like nodding but like swining like motion
+    - eyes are not looking at the camera closed most of the time. 
+    - My face looks sad most of the time. so cahnge that. since I am looking at the camera, smile more and not angery expression.too
+
+    - 
+    2) (eyes closed): Listen — pace, tone, fillers, thought completion
+    - Articulate more. 
+    - Not articulating my words properly. 
+    - breath control is not good. 
+    -  not stopping and breathing
+    - open your mounth more. 
+    - 
+
+
+
+
 "date": "2026-03-03T15:43:17.806697",
     "source_file": "IMG_4360.MOV",
     "file_id": "12cf64888f2fd61f3b8c88b6ef45a404"
