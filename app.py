@@ -7,6 +7,7 @@ import hashlib
 import uuid
 from datetime import datetime
 from pathlib import Path
+import streamlit.components.v1 as components
 
 # Importers from the existing backend
 from audio_utils import extract_audio_to_wav
@@ -309,6 +310,41 @@ if st.session_state.analysis_results:
     st.markdown("### SYSTEM OUTPUT")
     
     json_str = st.session_state.analysis_results
+    
+    # --- Custom JS Copy Button ---
+    btn_html = """
+    <div style="margin-bottom: 20px;">
+        <button id="customCopyBtn" style="width:100%; padding: 1.5rem; font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; background-color: #FF3300; color: #000; border: 4px solid #FF3300; cursor: pointer; text-transform: uppercase; transition: all 0.1s ease; box-shadow: 4px 4px 0px #000;">
+           COPY FULL PAYLOAD TO CLIPBOARD
+        </button>
+    </div>
+    """
+    st.markdown(btn_html, unsafe_allow_html=True)
+    
+    safe_json = json_str.replace('\\', '\\\\').replace('`', '\\`').replace('$', '\\$')
+    js_code = f"""
+    <script>
+        const btn = window.parent.document.getElementById('customCopyBtn');
+        if (btn) {{
+            btn.onclick = function() {{
+                window.parent.navigator.clipboard.writeText(`{safe_json}`).then(function() {{
+                    const oldText = btn.innerText;
+                    btn.innerText = 'COPIED!';
+                    btn.style.backgroundColor = '#000';
+                    btn.style.color = '#FF3300';
+                    setTimeout(function() {{
+                        btn.innerText = oldText;
+                        btn.style.backgroundColor = '#FF3300';
+                        btn.style.color = '#000';
+                    }}, 2000);
+                }});
+            }};
+        }}
+    </script>
+    """
+    components.html(js_code, height=0, width=0)
+    # --- End Custom JS Copy Button ---
+    
     lines = json_str.splitlines()
     truncated_json = "\n".join(lines[:15])
     if len(lines) > 15:
