@@ -1,12 +1,37 @@
 
 
+
+
+
+
+
+
+## Articulation Analysis: March 25, 2026
+
+### Weak Words & Diagnostics
+* **"Theory" (Prob: 0.24) / "Probability" (Prob: 0.64):** The **th** into **r** transition is collapsing. With a pen in your mouth, the tongue tip fails to meet the upper teeth for the fricative before retracting for the liquid **r**.
+* **"Behavior" / "Groove" / "Needle":** These show low probability due to **vowel flattening**. The pen prevents the necessary lip rounding for "groove" and the high tongue arch for the "ee" in "needle" and "behavior."
+* **"Markers" / "Started":** Weak **rhoticity**. The mid-word **r** is being swallowed because the pen is obstructing the tongue's lateral contraction.
+
+---
+
+### Progress Comparison
+Compared to the nature of "pen-in-mouth" training, your **speech rate (2.77 sps)** is controlled, but your **f1/f2 variance** indicates you are struggling significantly with vowel distinction. You are repeating words like "theory" and "once" up to 6 times, which shows high awareness but low muscular execution under resistance.
+
+---
+
+### Focus for Tomorrow
+**The Dental Fricative (TH):** Focus exclusively on making a clean contact between your tongue tip and your upper teeth for every "the," "theory," and "their," even with the pen in the way. Do not move to the next word until the "th" sound is audible and distinct from a "d" or "z."
+
+---
+
+**Log Note:** *03/25/26: Focused on habit theory text; high resistance on 'th' and 'r' clusters, targeting tongue-to-teeth contact for tomorrow.*
+
+
+
+
+
 ----------------------------------------------------------------------------------------------
-
-
-
-
-
-
 
 
 

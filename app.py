@@ -3,6 +3,9 @@ import os
 import json
 import time
 import random
+import hashlib
+import uuid
+from datetime import datetime
 from pathlib import Path
 
 # Importers from the existing backend
@@ -11,6 +14,11 @@ from transcription import evaluate_transcription
 from acoustics import evaluate_acoustics
 from output_manager import append_to_metrics, get_file_id, is_file_processed
 import config
+
+if "analysis_results" not in st.session_state:
+    st.session_state.analysis_results = None
+if "last_analyzed_file" not in st.session_state:
+    st.session_state.last_analyzed_file = None
 
 st.set_page_config(
     page_title="ARTICULATION ANALYZER", 
@@ -181,95 +189,125 @@ p {
 st.markdown("<h1>ARTICULATION<br>ANALYZER</h1>", unsafe_allow_html=True)
 st.markdown("<p>DROP IN RAW AUDIO. GET TRUTH.</p>", unsafe_allow_html=True)
 
-# --- DIRECTORIES ---
+# --- DIRECTORIES & CACHE ---
 RESOURCES_DIR = Path("resources/articulations")
 RESOURCES_DIR.mkdir(parents=True, exist_ok=True)
 HISTORY_FILE = "metrics_history.json"
+
+@st.cache_data
+def load_history_ids(history_file):
+    ids = set()
+    if os.path.exists(history_file):
+        try:
+            with open(history_file, "r", encoding="utf-8") as f:
+                content = f.read()
+                if content.strip():
+                    history = json.loads(content)
+                    for entry in history:
+                        if "file_id" in entry:
+                            ids.add(entry["file_id"])
+                        elif "source_file" in entry:
+                            # Fallback if no file_id
+                            ids.add(entry["source_file"])
+        except Exception:
+            pass
+    return ids
 
 # --- UPLOADER ---
 uploaded_file = st.file_uploader("UPLOAD MEDIA", type=["m4a", "mp4", "mov", "mkv", "wav"])
 
 if uploaded_file is not None:
-    # 1. Save uploaded file to resources/articulations
-    file_path = RESOURCES_DIR / uploaded_file.name
-    
+    # Reset state if a new file is uploaded
+    if st.session_state.last_analyzed_file != uploaded_file.name:
+        st.session_state.analysis_results = None
+        st.session_state.last_analyzed_file = uploaded_file.name
+
     # Check if we should render analyze button
     st.write("---")
     
-    if st.button("EXECUTE ANALYSIS", use_container_width=True):
-        # Save bytes
-        with open(file_path, "wb") as f:
-            f.write(uploaded_file.getbuffer())
+    # Hide the analyze button if we already have results for this file on screen
+    if not st.session_state.analysis_results:
+        if st.button("EXECUTE ANALYSIS", use_container_width=True):
         
-        # Determine Loading Message
-        loading_msg = "INITIATING EXTRACTION SEQUENCE..."
-        if os.path.exists("loading_messages.txt"):
-            with open("loading_messages.txt", "r") as lf:
-                msgs = [L.strip() for L in lf if L.strip()]
-                if msgs:
-                    loading_msg = random.choice(msgs)
+            # PREVENT DISK I/O ON DUPLICATE
+            unique_str = f"{uploaded_file.name}-{uploaded_file.size}"
+            memory_id = hashlib.md5(unique_str.encode()).hexdigest()
+            
+            processed_ids = load_history_ids(HISTORY_FILE)
+            
+            if memory_id in processed_ids or uploaded_file.name in processed_ids:
+                st.warning(f"FILE '{uploaded_file.name}' ALREADY ANALYZED. CHECK HISTORY.")
+            else:
+                # Save bytes only if not processed. Use a random filename.
+                random_filename = f"{uuid.uuid4().hex}{Path(uploaded_file.name).suffix}"
+                file_path = RESOURCES_DIR / random_filename
+                
+                with open(file_path, "wb") as f:
+                    f.write(uploaded_file.getbuffer())
+                
+                # Determine Loading Message
+                loading_msg = "INITIATING EXTRACTION SEQUENCE..."
+                if os.path.exists("loading_messages.txt"):
+                    with open("loading_messages.txt", "r") as lf:
+                        msgs = [L.strip() for L in lf if L.strip()]
+                        if msgs:
+                            loading_msg = random.choice(msgs)
+                            
+                # Initiate pipeline
+                loading_placeholder = st.empty()
+                loading_placeholder.markdown(f'<div class="loading-container"><div class="loading-text">{loading_msg}</div></div>', unsafe_allow_html=True)
+                time.sleep(0.1)  # Brief pause to ensure UI renders before blocking thread
+                
+                wav_path = None
+                try:
+                    start_time = time.time()
+                    file_id = get_file_id(str(file_path))  # matches memory_id
                     
-        # Initiate pipeline
-        loading_placeholder = st.empty()
-        loading_placeholder.markdown(f'<div class="loading-container"><div class="loading-text">{loading_msg}</div></div>', unsafe_allow_html=True)
-        time.sleep(0.1)  # Brief pause to ensure UI renders before blocking thread
-        
-        start_time = time.time()
-        file_id = get_file_id(str(file_path))
-        
-        # Check history
-        if is_file_processed(HISTORY_FILE, uploaded_file.name, file_id):
-            loading_placeholder.empty()
-            st.warning(f"FILE '{uploaded_file.name}' ALREADY ANALYZED. CHECK HISTORY.")
-        else:
-            wav_path = None
-            try:
-                # Audio pass
-                wav_path = extract_audio_to_wav(str(file_path))
-                
-                # Compute
-                transcription_metrics = evaluate_transcription(
-                    wav_path,
-                    conf_threshold=config.WEAK_WORD_CONFIDENCE_THRESHOLD,
-                    pause_threshold=config.PAUSE_THRESHOLD_SECONDS
-                )
-                acoustic_metrics = evaluate_acoustics(wav_path)
-                
-                # Merge dictionaries strictly
-                final_metrics = {**transcription_metrics, **acoustic_metrics}
-                
-                # Dispatch to JSON history
-                append_to_metrics(HISTORY_FILE, uploaded_file.name, file_id, final_metrics)
-                
-                elapsed = time.time() - start_time
-                loading_placeholder.empty()
-                st.success(f"ANALYSIS COMPLETE IN {elapsed:.2f}s")
-                
-                # Render JSON payload
-                st.markdown("### SYSTEM OUTPUT")
-                
-                # Generate a truncated raw string view, then an expander
-                json_str = json.dumps(final_metrics, indent=2)
-                
-                # Copy JSON requirement via download_button above output
-                st.download_button(
-                    label="DOWNLOAD / COPY JSON",
-                    data=json_str,
-                    file_name=f"ARTICULATION_{file_id}.json",
-                    mime="application/json"
-                )
-                
-                truncated_json = "\n".join(json_str.splitlines()[:15])
-                
-                st.markdown(f'<div class="json-preview"><pre style="color: #0f0; margin: 0;">{truncated_json}</pre></div>', unsafe_allow_html=True)
-                
-                with st.expander("VIEW FULL PAYLOAD"):
-                    st.json(final_metrics)
+                    # Audio pass
+                    wav_path = extract_audio_to_wav(str(file_path))
                     
-            except Exception as e:
-                loading_placeholder.empty()
-                st.error(f"CRITICAL FAILURE: {str(e)}")
-            finally:
-                # Strict disk hygiene
-                if wav_path and os.path.exists(wav_path):
-                    os.remove(wav_path)
+                    # Compute
+                    transcription_metrics = evaluate_transcription(
+                        wav_path,
+                        conf_threshold=config.WEAK_WORD_CONFIDENCE_THRESHOLD,
+                        pause_threshold=config.PAUSE_THRESHOLD_SECONDS
+                    )
+                    acoustic_metrics = evaluate_acoustics(wav_path)
+                    
+                    # Merge dictionaries strictly
+                    final_metrics = {**transcription_metrics, **acoustic_metrics}
+                    
+                    # Dispatch to JSON history
+                    append_to_metrics(HISTORY_FILE, uploaded_file.name, file_id, final_metrics)
+                    load_history_ids.clear() # Invalidate cache so new file is tracked
+                    
+                    elapsed = time.time() - start_time
+                    loading_placeholder.empty()
+                    st.success(f"ANALYSIS COMPLETE IN {elapsed:.2f}s")
+                    
+                    # Render exact JSON payload via Session State
+                    full_payload = {
+                        "date": datetime.now().isoformat(),
+                        "source_file": uploaded_file.name,
+                        "file_id": memory_id,
+                        "metrics": final_metrics
+                    }
+                    
+                    st.session_state.analysis_results = json.dumps(full_payload, indent=2)
+                    st.rerun()  # Instantly refresh to show results properly outside button scope
+                    
+                except Exception as e:
+                    loading_placeholder.empty()
+                    st.error(f"CRITICAL FAILURE: {str(e)}")
+                finally:
+                    # Strict disk hygiene
+                    if wav_path and os.path.exists(wav_path):
+                        os.remove(wav_path)
+
+# Always render output if present in state, surviving page interactions
+if st.session_state.analysis_results:
+    st.markdown("### SYSTEM OUTPUT")
+    st.code(st.session_state.analysis_results, language="json")
+    if st.button("RESET MEMORY & ANALYZE NEW FILE", use_container_width=True):
+        st.session_state.analysis_results = None
+        st.rerun()
