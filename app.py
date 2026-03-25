@@ -307,7 +307,18 @@ if uploaded_file is not None:
 # Always render output if present in state, surviving page interactions
 if st.session_state.analysis_results:
     st.markdown("### SYSTEM OUTPUT")
-    st.code(st.session_state.analysis_results, language="json")
+    
+    json_str = st.session_state.analysis_results
+    lines = json_str.splitlines()
+    truncated_json = "\n".join(lines[:15])
+    if len(lines) > 15:
+        truncated_json += "\n\n... [ EXPAND BELOW TO COPY FULL PAYLOAD ]"
+        
+    st.markdown(f'<div class="json-preview"><pre style="color: #666; font-family: \'JetBrains Mono\', monospace; margin: 0;">{truncated_json}</pre></div>', unsafe_allow_html=True)
+    
+    with st.expander("VIEW FULL PAYLOAD"):
+        st.code(json_str, language="json")
+        
     if st.button("RESET MEMORY & ANALYZE NEW FILE", use_container_width=True):
         st.session_state.analysis_results = None
         st.rerun()
