@@ -20704,5 +20704,634 @@
       "f2_variance_sd": 296.96,
       "mean_hnr": 5.19
     }
+  },
+  {
+    "date": "2026-03-25T15:50:22.998208",
+    "source_file": "Readings23123.m4a",
+    "file_id": "9f1971cd267307af7ac811c782bcc9eb",
+    "metrics": {
+      "text": "Okay, we came back and started reading the groove to your theory of habit, theory, theory,  theory, theory, theory, theory of habit.  One hears a lot of talk about proving once, once, once strokes in tennis, the, the, the, the, the, the theory,  this theory, is a simple one.  Every time you swing your racket in a certain way, you increase your probability, these,  that you will swing that way again, in this way, you pattern called grooves, build up,  which have a, produce, a, produce position to beat themselves, golfer, use the same term.  It is as if the nervous, nervous, nervous system will occur to just every time an action  is performed. A slight impression is made in the markers copy cells of the brain, just as it leaves  blowing over a fine green beach or sand, will leave its sand, sand, traced.  When the same action, when the same action is repeated, the groove is more slightly deeper.  After many similar actions, there's more recognizable groove into which the needle, needle, needle,  needle of behavior seems to fall automatically. Then the, then the behavior can be deemed groove.  Because, because these patterns are serving a function, the behavior is reinforced or rewarded and  tends to continue. The deeper groove in the nervous system, the harder it seems to be to break,  it habit, there habit. We had the, the, the, the, the experience or deciding that, that, that,  that we will not hit a tennis ball, a certain way again. For example, it seems to be a simple matter  to keep your eye on the ball, once you understand the obvious benefits of doing so,  but time and again, we take our eyes, eye over it. Often, often, in fact, the harder we try to  break a habit, the harder it becomes to do. You see what players, players trying to connect the habit,  habit of rolling the, the racket, the racket over, they will usually be seen getting their,  their teeth, teeth, teeth, teeth, exerting all their willpower to get out of their, their, their, their,  all groove. Watch the racket after it hits the, hit the ball, it will begin again to the run over,  sealing the all pattern, then their muscles will tighten and the force of the turn to the far position.  You can see in the resulting behavior, exactly where the all habit was halted and the new  willpower took over. Usually, the barrel is one, it's at all only after a good deal of struggle  and frustration over the course of some time.",
+      "word_count": 432,
+      "weak_words": [
+        {
+          "word": "Okay,",
+          "start": 0.0,
+          "end": 1.74,
+          "probability": 0.3352729380130768
+        },
+        {
+          "word": "started",
+          "start": 3.22,
+          "end": 3.86,
+          "probability": 0.5054031610488892
+        },
+        {
+          "word": "the",
+          "start": 4.52,
+          "end": 8.86,
+          "probability": 0.13950125873088837
+        },
+        {
+          "word": "groove",
+          "start": 8.86,
+          "end": 9.42,
+          "probability": 0.16537493467330933
+        },
+        {
+          "word": "to",
+          "start": 9.42,
+          "end": 10.26,
+          "probability": 0.07613575458526611
+        },
+        {
+          "word": "theory",
+          "start": 12.68,
+          "end": 13.94,
+          "probability": 0.24126987159252167
+        },
+        {
+          "word": "habit,",
+          "start": 14.22,
+          "end": 15.26,
+          "probability": 0.6231762766838074
+        },
+        {
+          "word": "of",
+          "start": 21.1,
+          "end": 21.6,
+          "probability": 0.19391301274299622
+        },
+        {
+          "word": "One",
+          "start": 21.78,
+          "end": 22.56,
+          "probability": 0.2188764065504074
+        },
+        {
+          "word": "hears",
+          "start": 22.56,
+          "end": 23.1,
+          "probability": 0.21907736361026764
+        },
+        {
+          "word": "proving",
+          "start": 25.42,
+          "end": 26.08,
+          "probability": 0.6842617392539978
+        },
+        {
+          "word": "strokes",
+          "start": 29.24,
+          "end": 30.14,
+          "probability": 0.12684465944766998
+        },
+        {
+          "word": "in",
+          "start": 30.14,
+          "end": 30.56,
+          "probability": 0.5293451547622681
+        },
+        {
+          "word": "the,",
+          "start": 31.98,
+          "end": 32.06,
+          "probability": 0.6206219792366028
+        },
+        {
+          "word": "theory,",
+          "start": 34.98,
+          "end": 35.72,
+          "probability": 0.5468171238899231
+        },
+        {
+          "word": "theory,",
+          "start": 36.32,
+          "end": 37.24,
+          "probability": 0.6939826011657715
+        },
+        {
+          "word": "increase",
+          "start": 44.26,
+          "end": 44.7,
+          "probability": 0.366606742143631
+        },
+        {
+          "word": "probability,",
+          "start": 45.1,
+          "end": 46.28,
+          "probability": 0.6424643397331238
+        },
+        {
+          "word": "these,",
+          "start": 47.48,
+          "end": 47.5,
+          "probability": 0.5142571926116943
+        },
+        {
+          "word": "that",
+          "start": 48.379999999999995,
+          "end": 48.72,
+          "probability": 0.09638794511556625
+        },
+        {
+          "word": "that",
+          "start": 49.56,
+          "end": 49.86,
+          "probability": 0.5271627902984619
+        },
+        {
+          "word": "grooves,",
+          "start": 53.0,
+          "end": 53.5,
+          "probability": 0.14811427891254425
+        },
+        {
+          "word": "have",
+          "start": 56.24,
+          "end": 56.44,
+          "probability": 0.5872935652732849
+        },
+        {
+          "word": "produce,",
+          "start": 56.72,
+          "end": 57.84,
+          "probability": 0.597779393196106
+        },
+        {
+          "word": "produce",
+          "start": 59.1,
+          "end": 59.36,
+          "probability": 0.5116482377052307
+        },
+        {
+          "word": "beat",
+          "start": 60.4,
+          "end": 60.68,
+          "probability": 0.38956600427627563
+        },
+        {
+          "word": "themselves,",
+          "start": 60.68,
+          "end": 61.16,
+          "probability": 0.579146146774292
+        },
+        {
+          "word": "golfer,",
+          "start": 62.32,
+          "end": 63.38,
+          "probability": 0.6707087159156799
+        },
+        {
+          "word": "use",
+          "start": 63.72,
+          "end": 63.96,
+          "probability": 0.5610496401786804
+        },
+        {
+          "word": "will",
+          "start": 73.32,
+          "end": 74.48,
+          "probability": 0.6399428248405457
+        },
+        {
+          "word": "occur",
+          "start": 74.48,
+          "end": 75.14,
+          "probability": 0.07329194247722626
+        },
+        {
+          "word": "to",
+          "start": 75.14,
+          "end": 75.4,
+          "probability": 0.22524118423461914
+        },
+        {
+          "word": "just",
+          "start": 75.4,
+          "end": 75.74,
+          "probability": 0.29730671644210815
+        },
+        {
+          "word": "an",
+          "start": 76.66,
+          "end": 76.92,
+          "probability": 0.6180967092514038
+        },
+        {
+          "word": "is",
+          "start": 77.3,
+          "end": 77.58,
+          "probability": 0.3108333349227905
+        },
+        {
+          "word": "A",
+          "start": 78.96,
+          "end": 79.04,
+          "probability": 0.6827821731567383
+        },
+        {
+          "word": "markers",
+          "start": 82.78,
+          "end": 83.3,
+          "probability": 0.06585701555013657
+        },
+        {
+          "word": "cells",
+          "start": 83.96,
+          "end": 84.46,
+          "probability": 0.5661579966545105
+        },
+        {
+          "word": "blowing",
+          "start": 87.54,
+          "end": 88.32,
+          "probability": 0.4126109778881073
+        },
+        {
+          "word": "green",
+          "start": 90.04,
+          "end": 90.46,
+          "probability": 0.5572720170021057
+        },
+        {
+          "word": "beach",
+          "start": 90.46,
+          "end": 91.82,
+          "probability": 0.45861226320266724
+        },
+        {
+          "word": "sand,",
+          "start": 95.24,
+          "end": 95.88,
+          "probability": 0.45244288444519043
+        },
+        {
+          "word": "traced.",
+          "start": 97.28,
+          "end": 97.72,
+          "probability": 0.20833620429039001
+        },
+        {
+          "word": "When",
+          "start": 100.06,
+          "end": 100.96,
+          "probability": 0.3447306752204895
+        },
+        {
+          "word": "when",
+          "start": 102.24,
+          "end": 102.48,
+          "probability": 0.6082420349121094
+        },
+        {
+          "word": "actions,",
+          "start": 109.78,
+          "end": 110.34,
+          "probability": 0.531223475933075
+        },
+        {
+          "word": "there's",
+          "start": 110.78,
+          "end": 111.02,
+          "probability": 0.6507369726896286
+        },
+        {
+          "word": "into",
+          "start": 112.76,
+          "end": 113.34,
+          "probability": 0.5112009644508362
+        },
+        {
+          "word": "needle",
+          "start": 117.34,
+          "end": 117.91,
+          "probability": 0.0959191545844078
+        },
+        {
+          "word": "seems",
+          "start": 120.19,
+          "end": 121.65,
+          "probability": 0.37029945850372314
+        },
+        {
+          "word": "deemed",
+          "start": 127.85,
+          "end": 128.89,
+          "probability": 0.31635600328445435
+        },
+        {
+          "word": "groove.",
+          "start": 128.89,
+          "end": 129.51,
+          "probability": 0.1267888844013214
+        },
+        {
+          "word": "tends",
+          "start": 140.39,
+          "end": 140.77,
+          "probability": 0.015740685164928436
+        },
+        {
+          "word": "deeper",
+          "start": 143.05,
+          "end": 143.39,
+          "probability": 0.6506722569465637
+        },
+        {
+          "word": "to",
+          "start": 149.21,
+          "end": 149.39,
+          "probability": 0.5943155288696289
+        },
+        {
+          "word": "it",
+          "start": 149.97,
+          "end": 149.97,
+          "probability": 0.6311464309692383
+        },
+        {
+          "word": "habit,",
+          "start": 149.97,
+          "end": 150.29,
+          "probability": 0.18635836243629456
+        },
+        {
+          "word": "there",
+          "start": 150.69,
+          "end": 150.89,
+          "probability": 0.5883359909057617
+        },
+        {
+          "word": "or",
+          "start": 158.13,
+          "end": 158.61,
+          "probability": 0.4445417523384094
+        },
+        {
+          "word": "that",
+          "start": 163.24999999999997,
+          "end": 164.04999999999998,
+          "probability": 0.24785225093364716
+        },
+        {
+          "word": "way",
+          "start": 169.19,
+          "end": 169.57,
+          "probability": 0.6887905597686768
+        },
+        {
+          "word": "seems",
+          "start": 171.87,
+          "end": 172.19,
+          "probability": 0.46020936965942383
+        },
+        {
+          "word": "to",
+          "start": 175.47,
+          "end": 175.87,
+          "probability": 0.6999300718307495
+        },
+        {
+          "word": "benefits",
+          "start": 185.95,
+          "end": 186.43,
+          "probability": 0.5171616077423096
+        },
+        {
+          "word": "but",
+          "start": 188.15,
+          "end": 188.47,
+          "probability": 0.285495400428772
+        },
+        {
+          "word": "our",
+          "start": 190.63,
+          "end": 190.97,
+          "probability": 0.681807816028595
+        },
+        {
+          "word": "over",
+          "start": 192.63,
+          "end": 193.11,
+          "probability": 0.47770431637763977
+        },
+        {
+          "word": "in",
+          "start": 195.57,
+          "end": 195.65,
+          "probability": 0.6841914653778076
+        },
+        {
+          "word": "a",
+          "start": 197.59,
+          "end": 197.83,
+          "probability": 0.32540279626846313
+        },
+        {
+          "word": "You",
+          "start": 200.61,
+          "end": 200.75,
+          "probability": 0.5625633001327515
+        },
+        {
+          "word": "see",
+          "start": 200.75,
+          "end": 200.83,
+          "probability": 0.46714627742767334
+        },
+        {
+          "word": "players,",
+          "start": 201.09,
+          "end": 202.53,
+          "probability": 0.5990051031112671
+        },
+        {
+          "word": "the",
+          "start": 204.67,
+          "end": 205.05,
+          "probability": 0.6838799118995667
+        },
+        {
+          "word": "habit",
+          "start": 207.01000000000002,
+          "end": 208.11,
+          "probability": 0.1549813449382782
+        },
+        {
+          "word": "racket,",
+          "start": 212.01,
+          "end": 212.45,
+          "probability": 0.5979793071746826
+        },
+        {
+          "word": "be",
+          "start": 217.47,
+          "end": 219.25,
+          "probability": 0.5433558225631714
+        },
+        {
+          "word": "seen",
+          "start": 219.25,
+          "end": 219.89,
+          "probability": 0.5009698271751404
+        },
+        {
+          "word": "their,",
+          "start": 220.35,
+          "end": 221.39,
+          "probability": 0.5341774225234985
+        },
+        {
+          "word": "exerting",
+          "start": 227.95,
+          "end": 228.69,
+          "probability": 0.6053438186645508
+        },
+        {
+          "word": "out",
+          "start": 230.57,
+          "end": 230.91,
+          "probability": 0.6845258474349976
+        },
+        {
+          "word": "all",
+          "start": 235.47,
+          "end": 235.79,
+          "probability": 0.12831883132457733
+        },
+        {
+          "word": "groove.",
+          "start": 235.79,
+          "end": 236.19,
+          "probability": 0.5165191292762756
+        },
+        {
+          "word": "racket",
+          "start": 237.97,
+          "end": 238.27,
+          "probability": 0.22374475002288818
+        },
+        {
+          "word": "after",
+          "start": 238.27,
+          "end": 238.83,
+          "probability": 0.5343002080917358
+        },
+        {
+          "word": "it",
+          "start": 238.83,
+          "end": 239.05,
+          "probability": 0.4816514253616333
+        },
+        {
+          "word": "run",
+          "start": 244.47,
+          "end": 244.77,
+          "probability": 0.6849153637886047
+        },
+        {
+          "word": "sealing",
+          "start": 245.93,
+          "end": 246.43,
+          "probability": 0.5524396300315857
+        },
+        {
+          "word": "all",
+          "start": 247.79,
+          "end": 247.99,
+          "probability": 0.3178228735923767
+        },
+        {
+          "word": "their",
+          "start": 248.89,
+          "end": 249.23,
+          "probability": 0.15825772285461426
+        },
+        {
+          "word": "and",
+          "start": 250.97,
+          "end": 252.21,
+          "probability": 0.42869311571121216
+        },
+        {
+          "word": "far",
+          "start": 255.03,
+          "end": 255.27,
+          "probability": 0.09533677995204926
+        },
+        {
+          "word": "position.",
+          "start": 255.27,
+          "end": 256.29,
+          "probability": 0.688549816608429
+        },
+        {
+          "word": "behavior,",
+          "start": 258.97,
+          "end": 259.51,
+          "probability": 0.007115194573998451
+        },
+        {
+          "word": "all",
+          "start": 260.77,
+          "end": 260.99,
+          "probability": 0.6681919097900391
+        },
+        {
+          "word": "willpower",
+          "start": 263.55,
+          "end": 264.39,
+          "probability": 0.27559979632496834
+        },
+        {
+          "word": "took",
+          "start": 264.39,
+          "end": 264.77,
+          "probability": 0.41639596223831177
+        },
+        {
+          "word": "Usually,",
+          "start": 265.77,
+          "end": 266.27,
+          "probability": 0.5877911448478699
+        },
+        {
+          "word": "barrel",
+          "start": 266.59,
+          "end": 267.01,
+          "probability": 0.656369686126709
+        },
+        {
+          "word": "one,",
+          "start": 267.37,
+          "end": 267.67,
+          "probability": 0.33357441425323486
+        },
+        {
+          "word": "a",
+          "start": 270.99,
+          "end": 271.21,
+          "probability": 0.429360955953598
+        },
+        {
+          "word": "and",
+          "start": 272.57,
+          "end": 272.87,
+          "probability": 0.1329686939716339
+        },
+        {
+          "word": "frustration",
+          "start": 272.87,
+          "end": 273.49,
+          "probability": 0.22416341304779053
+        }
+      ],
+      "pause_count": 49,
+      "avg_pause_duration_sec": 0.832,
+      "speech_rate_sps": 2.77,
+      "f1_variance_sd": 225.8,
+      "f2_variance_sd": 261.87,
+      "mean_hnr": 4.83
+    }
   }
 ]

@@ -1,6 +1,11 @@
 
 
 
+
+
+
+
+
  "date": "2026-03-09T18:13:57.487545",
     "source_file": "IMG_4395.MOV",
     "file_id": "9ce4d40f94fdfe4e4b2e8685fb865224",
@@ -9,9 +14,6 @@
     2) (eyes closed): Listen — pace, tone, fillers, thought completion
     - not articulating my words properly. rushinig and skipping letter. in words vowels and consonants are not clear. 
     - no strucute in my story. I am all over the place. better staying in the subject but seems like I was not intended to be that way.
-
-
-
 
 
 "date": "2026-03-09T18:13:38.731060",
