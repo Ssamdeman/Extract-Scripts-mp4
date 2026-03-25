@@ -9,3 +9,4 @@ openai-whisper
 nltk
 matplotlib
 textstat
+streamlit

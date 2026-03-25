@@ -21333,5 +21333,610 @@
       "f2_variance_sd": 261.87,
       "mean_hnr": 4.83
     }
+  },
+  {
+    "date": "2026-03-25T17:05:44.389675",
+    "source_file": "Gorham St 2shdhahdv.m4a",
+    "file_id": "8f0cd0c0280e4d2a1c08e67fc7855d7c",
+    "metrics": {
+      "text": "This reading is a little different because I'm not going to put a pen in my mouth, but rather I'm going to read my poems.  I want to hear myself how do I sound because I'm going to read this to an important person.  To an important person in my life.  Poem 1.  A hundred voices in the room.  Yours is the one that cuts through.  Not louder, not closer.  Just the only one that matters.  And you have no clue.  Your laugh does something I cannot explain.  Like Sun breaking through the afternoon rain.  It finds me whenever I try...  wherever, wherever, wherever I try to hide.  And suddenly I forget every thought inside.  I woke up on a quiet Wednesday at 8.  My first thought wasn't the time of the day.  It was whether you were awake.  That's what...  That's when I knew I wasn't in trouble.  The kind you cannot walk away from.  The kind that doubles.  I didn't... I did not plan for any of this.  We just arrive like a song I cannot dismiss.  Now your name sits at...  Tipo...  Now your name sits at the tip of my tongue.  Like a melody.  I swear I have always sung.  I cannot sing.  I won't say too much, at least not yet.  But you are the kind a person that's really hard to forget.  Alright, I need to practice these.  Because it sounds like horrible.  100 voices in the room.  Yours is the one that cuts right through.  Not loud, not closer.  Just the only one that matters.  And you have no clue.  Your laugh does something I can't explain.  Like sun breaking through.  And after noon rain, it finds me.  Whenever I try to hide.  Wherever.  I can say, wherever.  Wherever.  Wherever.  Wherever.  Wherever.  Wherever.  Wherever I try to hide.  And suddenly I forget.  Get.  And suddenly I forget every thought inside.  I woke up on a Wednesday.  I woke up a quiet Wednesday at 8.  And my first thought wasn't the same.  Wasn't the time of the day.  It was whether you wore away.  You wore away.  That's what I knew I was in trouble.  The kind you cannot walk away from.  The kind that doubles.  I didn't plan for this.  I didn't plan for any of this.  You just arrive like a song.  I cannot dismiss.  Now, your name sits at tip of my tongue.  Like a melody.  It's where I have always sung.  I want.  I want.  I won't say too much.  Not yet.  But you are the kind of person that's really hard to forget.  A hundred voices in the room.  Yours is the one that cuts right through.  Not louder, not closer.  Just the only one that matters.  And you have no clue.  Your laugh does something I cannot explain.  Like some breaking through an afternoon rain.  It finds me wherever I try to hide.  And suddenly I forget.  And suddenly I forget every thought inside.  I woke up on a quiet Wednesday at eight.  And my first thought wasn't the time of the day.  It was weather.  It was weather, weather, weather, weather, weather, weather.  I can say the weather and weather.  Weather, you will awake.  You will awake.  You will awake.  That is when I knew I was in trouble.  That's when I knew I was in trouble.  The kind you don't walk away from.  The kind that doubles.  I didn't plan for any of this.  You just arrived like a song.  I cannot dismiss.  Now your name sits at the tip of my tongue.  Like a melody.  I swear I have always sung.  I won't say too much, not yet.  But you are the kind person that is really hard to forget.  That's number one.  I read so many times just to reiterate.  Weather, weather, weather.  What's the weather?  I cannot differentiate between weather and this word.  I need to search up.",
+      "word_count": 655,
+      "weak_words": [
+        {
+          "word": "This",
+          "start": 1.6000000000000005,
+          "end": 2.2800000000000002,
+          "probability": 0.306358277797699
+        },
+        {
+          "word": "reading",
+          "start": 2.2800000000000002,
+          "end": 2.96,
+          "probability": 0.6997459530830383
+        },
+        {
+          "word": "a",
+          "start": 3.24,
+          "end": 3.38,
+          "probability": 0.6946483850479126
+        },
+        {
+          "word": "because",
+          "start": 4.14,
+          "end": 4.56,
+          "probability": 0.5448700785636902
+        },
+        {
+          "word": "going",
+          "start": 5.26,
+          "end": 5.42,
+          "probability": 0.4353342354297638
+        },
+        {
+          "word": "pen",
+          "start": 6.18,
+          "end": 6.38,
+          "probability": 0.6298338174819946
+        },
+        {
+          "word": "how",
+          "start": 11.6,
+          "end": 12.26,
+          "probability": 0.12354302406311035
+        },
+        {
+          "word": "because",
+          "start": 13.24,
+          "end": 13.84,
+          "probability": 0.5754073262214661
+        },
+        {
+          "word": "to",
+          "start": 15.52,
+          "end": 15.94,
+          "probability": 0.6627377271652222
+        },
+        {
+          "word": "an",
+          "start": 15.94,
+          "end": 17.06,
+          "probability": 0.6560589671134949
+        },
+        {
+          "word": "To",
+          "start": 18.62,
+          "end": 19.3,
+          "probability": 0.46534398198127747
+        },
+        {
+          "word": "Poem",
+          "start": 21.72,
+          "end": 22.6,
+          "probability": 0.3903879881836474
+        },
+        {
+          "word": "A",
+          "start": 24.14,
+          "end": 25.02,
+          "probability": 0.39250072836875916
+        },
+        {
+          "word": "Sun",
+          "start": 46.1,
+          "end": 46.54,
+          "probability": 0.29208335280418396
+        },
+        {
+          "word": "the",
+          "start": 47.66,
+          "end": 47.92,
+          "probability": 0.5628921389579773
+        },
+        {
+          "word": "It",
+          "start": 50.22,
+          "end": 50.68,
+          "probability": 0.12405350059270859
+        },
+        {
+          "word": "finds",
+          "start": 50.68,
+          "end": 50.96,
+          "probability": 0.6691607236862183
+        },
+        {
+          "word": "whenever",
+          "start": 51.34,
+          "end": 52.26,
+          "probability": 0.2964876890182495
+        },
+        {
+          "word": "try...",
+          "start": 53.14,
+          "end": 54.02,
+          "probability": 0.3124161809682846
+        },
+        {
+          "word": "wherever,",
+          "start": 56.06,
+          "end": 56.98,
+          "probability": 0.37818124890327454
+        },
+        {
+          "word": "I",
+          "start": 63.24,
+          "end": 64.02,
+          "probability": 0.6659016609191895
+        },
+        {
+          "word": "a",
+          "start": 68.7,
+          "end": 68.78,
+          "probability": 0.5406673550605774
+        },
+        {
+          "word": "My",
+          "start": 71.32,
+          "end": 71.5,
+          "probability": 0.547965943813324
+        },
+        {
+          "word": "whether",
+          "start": 75.76,
+          "end": 76.34,
+          "probability": 0.45980319380760193
+        },
+        {
+          "word": "That's",
+          "start": 78.9,
+          "end": 79.58000000000001,
+          "probability": 0.5876895263791084
+        },
+        {
+          "word": "what...",
+          "start": 79.58000000000001,
+          "end": 80.26,
+          "probability": 0.4069705717265606
+        },
+        {
+          "word": "That's",
+          "start": 80.26,
+          "end": 80.74,
+          "probability": 0.682610034942627
+        },
+        {
+          "word": "We",
+          "start": 93.28,
+          "end": 93.5,
+          "probability": 0.6882410645484924
+        },
+        {
+          "word": "arrive",
+          "start": 93.76,
+          "end": 94.32,
+          "probability": 0.5750210285186768
+        },
+        {
+          "word": "like",
+          "start": 94.32,
+          "end": 94.84,
+          "probability": 0.6835968494415283
+        },
+        {
+          "word": "I",
+          "start": 95.24,
+          "end": 95.9,
+          "probability": 0.34300845861434937
+        },
+        {
+          "word": "Now",
+          "start": 98.16,
+          "end": 98.3,
+          "probability": 0.6091755032539368
+        },
+        {
+          "word": "Tipo...",
+          "start": 102.86000000000001,
+          "end": 103.54,
+          "probability": 0.560501292347908
+        },
+        {
+          "word": "Now",
+          "start": 103.54,
+          "end": 103.9,
+          "probability": 0.01025492325425148
+        },
+        {
+          "word": "I",
+          "start": 110.34,
+          "end": 111.94,
+          "probability": 0.40753042697906494
+        },
+        {
+          "word": "a",
+          "start": 123.22,
+          "end": 123.42,
+          "probability": 0.5148760080337524
+        },
+        {
+          "word": "Alright,",
+          "start": 127.14,
+          "end": 127.76,
+          "probability": 0.6429351568222046
+        },
+        {
+          "word": "Because",
+          "start": 129.86,
+          "end": 130.34,
+          "probability": 0.14760525524616241
+        },
+        {
+          "word": "sounds",
+          "start": 130.98,
+          "end": 131.48,
+          "probability": 0.3529079258441925
+        },
+        {
+          "word": "100",
+          "start": 135.71999999999997,
+          "end": 136.67999999999998,
+          "probability": 0.20344886183738708
+        },
+        {
+          "word": "right",
+          "start": 142.1,
+          "end": 144.12,
+          "probability": 0.35662177205085754
+        },
+        {
+          "word": "Your",
+          "start": 157.22000000000003,
+          "end": 158.08,
+          "probability": 0.3920736312866211
+        },
+        {
+          "word": "sun",
+          "start": 161.74,
+          "end": 162.2,
+          "probability": 0.396340936422348
+        },
+        {
+          "word": "noon",
+          "start": 164.34,
+          "end": 164.68,
+          "probability": 0.6482536792755127
+        },
+        {
+          "word": "Whenever",
+          "start": 167.78,
+          "end": 167.96,
+          "probability": 0.2768363654613495
+        },
+        {
+          "word": "Wherever.",
+          "start": 171.32,
+          "end": 171.86,
+          "probability": 0.6550433039665222
+        },
+        {
+          "word": "I",
+          "start": 173.3,
+          "end": 173.36,
+          "probability": 0.16967903077602386
+        },
+        {
+          "word": "wherever.",
+          "start": 173.86,
+          "end": 174.28,
+          "probability": 0.5067475438117981
+        },
+        {
+          "word": "Wherever.",
+          "start": 174.62,
+          "end": 174.78,
+          "probability": 0.28931543231010437
+        },
+        {
+          "word": "Wherever.",
+          "start": 174.78,
+          "end": 174.9,
+          "probability": 0.02988465130329132
+        },
+        {
+          "word": "I",
+          "start": 188.92,
+          "end": 188.92,
+          "probability": 0.08986882865428925
+        },
+        {
+          "word": "And",
+          "start": 189.98,
+          "end": 190.0,
+          "probability": 0.585914134979248
+        },
+        {
+          "word": "I",
+          "start": 190.44,
+          "end": 190.8,
+          "probability": 0.519511878490448
+        },
+        {
+          "word": "Get.",
+          "start": 191.56,
+          "end": 191.82,
+          "probability": 0.32304278016090393
+        },
+        {
+          "word": "every",
+          "start": 193.9,
+          "end": 194.44,
+          "probability": 0.47709691524505615
+        },
+        {
+          "word": "woke",
+          "start": 196.98,
+          "end": 197.14,
+          "probability": 0.6990950107574463
+        },
+        {
+          "word": "I",
+          "start": 198.48,
+          "end": 198.92,
+          "probability": 0.27740442752838135
+        },
+        {
+          "word": "woke",
+          "start": 198.92,
+          "end": 201.08,
+          "probability": 0.6355187296867371
+        },
+        {
+          "word": "a",
+          "start": 201.44,
+          "end": 201.74,
+          "probability": 0.26543787121772766
+        },
+        {
+          "word": "8.",
+          "start": 203.68,
+          "end": 203.94,
+          "probability": 0.6822044253349304
+        },
+        {
+          "word": "whether",
+          "start": 214.34,
+          "end": 215.52,
+          "probability": 0.506102979183197
+        },
+        {
+          "word": "away.",
+          "start": 216.84,
+          "end": 217.68,
+          "probability": 0.4403703808784485
+        },
+        {
+          "word": "You",
+          "start": 217.98,
+          "end": 218.08,
+          "probability": 0.28819185495376587
+        },
+        {
+          "word": "was",
+          "start": 221.14,
+          "end": 221.36,
+          "probability": 0.6524645686149597
+        },
+        {
+          "word": "The",
+          "start": 224.74,
+          "end": 225.42,
+          "probability": 0.22196441888809204
+        },
+        {
+          "word": "that",
+          "start": 225.82,
+          "end": 226.28,
+          "probability": 0.6586195230484009
+        },
+        {
+          "word": "want.",
+          "start": 249.58,
+          "end": 250.5,
+          "probability": 0.27728161215782166
+        },
+        {
+          "word": "I",
+          "start": 250.5,
+          "end": 251.12,
+          "probability": 0.3959518373012543
+        },
+        {
+          "word": "won't",
+          "start": 251.12,
+          "end": 253.14,
+          "probability": 0.5996123850345612
+        },
+        {
+          "word": "Not",
+          "start": 254.94,
+          "end": 255.1,
+          "probability": 0.28505581617355347
+        },
+        {
+          "word": "A",
+          "start": 270.2,
+          "end": 271.06,
+          "probability": 0.5715729594230652
+        },
+        {
+          "word": "Just",
+          "start": 278.8,
+          "end": 279.84,
+          "probability": 0.05797315016388893
+        },
+        {
+          "word": "some",
+          "start": 291.28,
+          "end": 291.7,
+          "probability": 0.3908047676086426
+        },
+        {
+          "word": "I",
+          "start": 305.62,
+          "end": 306.66,
+          "probability": 0.4612255096435547
+        },
+        {
+          "word": "eight.",
+          "start": 311.14,
+          "end": 311.56,
+          "probability": 0.15995165705680847
+        },
+        {
+          "word": "weather.",
+          "start": 324.42,
+          "end": 325.88,
+          "probability": 0.5658887624740601
+        },
+        {
+          "word": "the",
+          "start": 327.32,
+          "end": 327.58,
+          "probability": 0.2458001673221588
+        },
+        {
+          "word": "weather",
+          "start": 327.58,
+          "end": 328.2,
+          "probability": 0.3878985047340393
+        },
+        {
+          "word": "and",
+          "start": 328.2,
+          "end": 328.68,
+          "probability": 0.694689154624939
+        },
+        {
+          "word": "Weather,",
+          "start": 329.58,
+          "end": 330.38,
+          "probability": 0.5181596875190735
+        },
+        {
+          "word": "you",
+          "start": 331.64,
+          "end": 331.94,
+          "probability": 0.38894757628440857
+        },
+        {
+          "word": "will",
+          "start": 331.94,
+          "end": 332.32,
+          "probability": 0.333290159702301
+        },
+        {
+          "word": "You",
+          "start": 332.82,
+          "end": 333.36,
+          "probability": 0.4513855278491974
+        },
+        {
+          "word": "will",
+          "start": 333.36,
+          "end": 334.26,
+          "probability": 0.12955044209957123
+        },
+        {
+          "word": "awake.",
+          "start": 334.26,
+          "end": 334.86,
+          "probability": 0.3403252065181732
+        },
+        {
+          "word": "is",
+          "start": 338.34,
+          "end": 338.58,
+          "probability": 0.27348223328590393
+        },
+        {
+          "word": "I",
+          "start": 338.94,
+          "end": 340.72,
+          "probability": 0.39230361580848694
+        },
+        {
+          "word": "trouble.",
+          "start": 341.78,
+          "end": 342.12,
+          "probability": 0.45873454213142395
+        },
+        {
+          "word": "your",
+          "start": 358.32,
+          "end": 358.86,
+          "probability": 0.6467376947402954
+        },
+        {
+          "word": "Like",
+          "start": 361.32,
+          "end": 361.94,
+          "probability": 0.3020118176937103
+        },
+        {
+          "word": "I",
+          "start": 363.92,
+          "end": 364.84,
+          "probability": 0.47833409905433655
+        },
+        {
+          "word": "That's",
+          "start": 378.98,
+          "end": 379.82,
+          "probability": 0.5584679320454597
+        },
+        {
+          "word": "Weather,",
+          "start": 386.82,
+          "end": 387.58,
+          "probability": 0.012410317547619343
+        },
+        {
+          "word": "cannot",
+          "start": 392.14,
+          "end": 392.34,
+          "probability": 0.16535748541355133
+        },
+        {
+          "word": "differentiate",
+          "start": 392.34,
+          "end": 392.94,
+          "probability": 0.5999884605407715
+        },
+        {
+          "word": "word.",
+          "start": 394.36,
+          "end": 394.72,
+          "probability": 0.6937925219535828
+        },
+        {
+          "word": "need",
+          "start": 397.16,
+          "end": 397.3,
+          "probability": 0.4446341395378113
+        },
+        {
+          "word": "up.",
+          "start": 397.76,
+          "end": 398.08,
+          "probability": 0.1285441815853119
+        }
+      ],
+      "pause_count": 99,
+      "avg_pause_duration_sec": 1.205,
+      "speech_rate_sps": 3.28,
+      "f1_variance_sd": 225.87,
+      "f2_variance_sd": 270.24,
+      "mean_hnr": 4.79
+    }
   }
 ]
