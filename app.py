@@ -100,11 +100,17 @@ p {
     transition: all 0.1s ease;
     box-shadow: 4px 4px 0px #000000;
 }
+.stButton > button * {
+    color: #000000 !important;
+}
 .stButton > button:hover {
     background-color: #000000 !important;
     color: #FF3300 !important;
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0px #FF3300;
+}
+.stButton > button:hover * {
+    color: #FF3300 !important;
 }
 .stButton > button:active {
     transform: translate(2px, 2px);
@@ -207,8 +213,7 @@ def load_history_ids(history_file):
                     for entry in history:
                         if "file_id" in entry:
                             ids.add(entry["file_id"])
-                        elif "source_file" in entry:
-                            # Fallback if no file_id
+                        if "source_file" in entry:
                             ids.add(entry["source_file"])
         except Exception:
             pass
@@ -262,7 +267,7 @@ if uploaded_file is not None:
                 wav_path = None
                 try:
                     start_time = time.time()
-                    file_id = get_file_id(str(file_path))  # matches memory_id
+                    file_id = memory_id  # uses the original filename/size hash instead of the random uuid file path
                     
                     # Audio pass
                     wav_path = extract_audio_to_wav(str(file_path))
