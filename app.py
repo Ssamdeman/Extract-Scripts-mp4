@@ -27,6 +27,8 @@ if "sa_analysis_results" not in st.session_state:
     st.session_state.sa_analysis_results = None
 if "sa_last_analyzed_file" not in st.session_state:
     st.session_state.sa_last_analyzed_file = None
+if "sa_is_processing" not in st.session_state:
+    st.session_state.sa_is_processing = False
 
 @st.cache_resource
 def load_whisper_model():
@@ -428,9 +430,9 @@ if sa_uploaded_file is not None:
             except TypeError:
                 audio_observation = st.text_area("  ", height=150, key="audio_obs")
         
-        # Disable execution if missing manual analysis
-        can_execute = bool(body_observation.strip() and audio_observation.strip())
-        can_execute_text = "" if can_execute else " [FILL BOXES BEFORE CLICKING]"
+        # Disable execution if missing manual analysis OR already processing
+        can_execute = bool(body_observation.strip() and audio_observation.strip()) and not st.session_state.sa_is_processing
+        can_execute_text = "" if can_execute else (" [PROCESSING...]" if st.session_state.sa_is_processing else " [FILL BOXES BEFORE CLICKING]")
         # Try-except block for older streamlit button disabled prop and use_container_width
         try:
             btn_clicked = st.button("EXECUTE ANALYSIS", use_container_width=True, disabled=not can_execute, key="sa_btn")
@@ -443,13 +445,17 @@ if sa_uploaded_file is not None:
                 btn_clicked = st.button(f"EXECUTE ANALYSIS{can_execute_text}", key="sa_btn")
         
         
-        if btn_clicked:
+        if btn_clicked and not st.session_state.sa_is_processing:
+            # Lock button immediately to prevent double-click
+            st.session_state.sa_is_processing = True
+            
             unique_str = f"{sa_uploaded_file.name}-{sa_uploaded_file.size}"
             memory_id = hashlib.md5(unique_str.encode()).hexdigest()
             
             processed_ids = load_history_ids(SA_HISTORY_FILE)
             
             if memory_id in processed_ids or sa_uploaded_file.name in processed_ids:
+                st.session_state.sa_is_processing = False
                 st.warning(f"FILE '{sa_uploaded_file.name}' ALREADY ANALYZED. CHECK HISTORY.")
             else:
                 random_filename = f"{uuid.uuid4().hex}{Path(sa_uploaded_file.name).suffix}"
@@ -465,9 +471,9 @@ if sa_uploaded_file is not None:
                         if msgs:
                             loading_msg = random.choice(msgs)
                 
+                # Show loading animation BEFORE the blocking compute call
                 loading_placeholder = st.empty()
                 loading_placeholder.markdown(f'<div class="loading-container"><div class="loading-text">{loading_msg}</div></div>', unsafe_allow_html=True)
-                time.sleep(0.1)
                 
                 try:
                     start_time = time.time()
@@ -524,6 +530,7 @@ if sa_uploaded_file is not None:
                     st.success(f"ANALYSIS COMPLETE IN {elapsed:.2f}s")
                     
                     st.session_state.sa_analysis_results = json.dumps(full_payload, indent=2)
+                    st.session_state.sa_is_processing = False  # Unlock before rerun
                     try:
                         st.rerun()
                     except AttributeError:
@@ -531,6 +538,7 @@ if sa_uploaded_file is not None:
                     
                 except Exception as e:
                     loading_placeholder.empty()
+                    st.session_state.sa_is_processing = False  # Unlock so user can retry
                     st.error(f"CRITICAL FAILURE: {str(e)}")
 
 if st.session_state.sa_analysis_results:

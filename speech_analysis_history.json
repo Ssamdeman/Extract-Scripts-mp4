@@ -553,5 +553,230 @@
         ]
       ]
     }
+  },
+  {
+    "date": "2026-03-25T22:43:04.094531",
+    "source_file": "IMG_5403.MOV",
+    "file_id": "4af1895bdad05960708af07efaca1695",
+    "manual_observations": {
+      "visual_notes": "test1",
+      "audio_notes": "test2"
+    },
+    "metrics": {
+      "transcript": "Wait, wait, I have a solution. Can you scroll down a little bit?\nYeah, you see, no, hold on. You see there's a mixed and then they give you, yeah, down on that area,\nthrough table. You see how they labeled properly. You have the variable variable variable variable variable variable and then you have the variable and then you have the, the, the, what's the call string, like I'm happy, I'm not happy about this, it's labeled.\nI think you can ask, yeah, exactly. You see how they made it that way. It looks so visually. Makes sense.",
+      "statistics": {
+        "total_words": 99,
+        "unique_words": 50,
+        "total_filler_words": 2,
+        "filler_word_percentage": 2.02
+      },
+      "readability": {
+        "score": 5.03,
+        "interpretation": "Elementary school level (easy to understand)"
+      },
+      "filler_words": {
+        "like": 1,
+        "so": 1
+      },
+      "word_frequency": [
+        [
+          "variable",
+          7
+        ],
+        [
+          "see",
+          4
+        ],
+        [
+          "yeah",
+          3
+        ],
+        [
+          "wait",
+          2
+        ],
+        [
+          "labeled",
+          2
+        ],
+        [
+          "im",
+          2
+        ],
+        [
+          "happy",
+          2
+        ],
+        [
+          "solution",
+          1
+        ],
+        [
+          "scroll",
+          1
+        ],
+        [
+          "little",
+          1
+        ],
+        [
+          "bit",
+          1
+        ],
+        [
+          "hold",
+          1
+        ],
+        [
+          "theres",
+          1
+        ],
+        [
+          "mixed",
+          1
+        ],
+        [
+          "give",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-03-25T22:43:06.941446",
+    "source_file": "IMG_5403.MOV",
+    "file_id": "4af1895bdad05960708af07efaca1695",
+    "manual_observations": {
+      "visual_notes": "test1",
+      "audio_notes": "test2"
+    },
+    "metrics": {
+      "transcript": "Wait, wait, I have a solution. Can you scroll down a little bit?\nYeah, you see, no, hold on. You see there's a mixed and then they give you, yeah, down on that area,\nthrough table. You see how they labeled properly. You have the variable and then you have the\nthe protocol string, like I'm happy, I'm not happy about this. It labeled. I think you can ask,\nyeah, exactly. You see how they made it that way. It looks so visually mixed sense.",
+      "statistics": {
+        "total_words": 85,
+        "unique_words": 48,
+        "total_filler_words": 2,
+        "filler_word_percentage": 2.35
+      },
+      "readability": {
+        "score": 2.95,
+        "interpretation": "Elementary school level (easy to understand)"
+      },
+      "filler_words": {
+        "like": 1,
+        "so": 1
+      },
+      "word_frequency": [
+        [
+          "see",
+          4
+        ],
+        [
+          "yeah",
+          3
+        ],
+        [
+          "wait",
+          2
+        ],
+        [
+          "mixed",
+          2
+        ],
+        [
+          "labeled",
+          2
+        ],
+        [
+          "im",
+          2
+        ],
+        [
+          "happy",
+          2
+        ],
+        [
+          "solution",
+          1
+        ],
+        [
+          "scroll",
+          1
+        ],
+        [
+          "little",
+          1
+        ],
+        [
+          "bit",
+          1
+        ],
+        [
+          "hold",
+          1
+        ],
+        [
+          "theres",
+          1
+        ],
+        [
+          "give",
+          1
+        ],
+        [
+          "area",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-03-25T22:52:26.156907",
+    "source_file": "IMG_5402.MOV",
+    "file_id": "3d840a030a4e18e444752f0c5e86b43b",
+    "manual_observations": {
+      "visual_notes": "test1",
+      "audio_notes": "test2"
+    },
+    "metrics": {
+      "transcript": "The native makes falar.\n\u6227 gitu lions",
+      "statistics": {
+        "total_words": 7,
+        "unique_words": 7,
+        "total_filler_words": 0,
+        "filler_word_percentage": 0.0
+      },
+      "readability": {
+        "score": 2.63,
+        "interpretation": "Elementary school level (easy to understand)"
+      },
+      "filler_words": {},
+      "word_frequency": [
+        [
+          "native",
+          1
+        ],
+        [
+          "makes",
+          1
+        ],
+        [
+          "falar",
+          1
+        ],
+        [
+          "\u6227",
+          1
+        ],
+        [
+          "gitu",
+          1
+        ],
+        [
+          "lions",
+          1
+        ]
+      ]
+    }
   }
 ]
