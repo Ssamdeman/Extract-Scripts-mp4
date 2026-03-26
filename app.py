@@ -15,11 +15,22 @@ from transcription import evaluate_transcription
 from acoustics import evaluate_acoustics
 from output_manager import append_to_metrics, get_file_id, is_file_processed
 import config
+import whisper
+from speech_analysis import process_and_analyze_file
 
 if "analysis_results" not in st.session_state:
     st.session_state.analysis_results = None
 if "last_analyzed_file" not in st.session_state:
     st.session_state.last_analyzed_file = None
+
+if "sa_analysis_results" not in st.session_state:
+    st.session_state.sa_analysis_results = None
+if "sa_last_analyzed_file" not in st.session_state:
+    st.session_state.sa_last_analyzed_file = None
+
+@st.cache_resource
+def load_whisper_model():
+    return whisper.load_model("base")
 
 st.set_page_config(
     page_title="ARTICULATION ANALYZER", 
@@ -233,7 +244,12 @@ if uploaded_file is not None:
     
     # Hide the analyze button if we already have results for this file on screen
     if not st.session_state.analysis_results:
-        if st.button("EXECUTE ANALYSIS", use_container_width=True):
+        try:
+            btn_clicked = st.button("EXECUTE ANALYSIS", use_container_width=True)
+        except TypeError:
+            btn_clicked = st.button("EXECUTE ANALYSIS")
+            
+        if btn_clicked:
         
             # PREVENT DISK I/O ON DUPLICATE
             unique_str = f"{uploaded_file.name}-{uploaded_file.size}"
@@ -300,7 +316,10 @@ if uploaded_file is not None:
                     }
                     
                     st.session_state.analysis_results = json.dumps(full_payload, indent=2)
-                    st.rerun()  # Instantly refresh to show results properly outside button scope
+                    try:
+                        st.rerun()  # Instantly refresh to show results properly outside button scope
+                    except AttributeError:
+                        st.experimental_rerun()
                     
                 except Exception as e:
                     loading_placeholder.empty()
@@ -360,6 +379,215 @@ if st.session_state.analysis_results:
     with st.expander("VIEW FULL PAYLOAD"):
         st.code(json_str, language="json")
         
-    if st.button("RESET MEMORY & ANALYZE NEW FILE", use_container_width=True):
+    try:
+        reset_clicked_p1 = st.button("RESET MEMORY & ANALYZE NEW FILE", use_container_width=True)
+    except TypeError:
+        reset_clicked_p1 = st.button("RESET MEMORY & ANALYZE NEW FILE")
+        
+    if reset_clicked_p1:
         st.session_state.analysis_results = None
-        st.rerun()
+        try:
+            st.rerun()
+        except AttributeError:
+            st.experimental_rerun()
+
+# --- SPEECH ANALYSIS PHASE 2 ---
+
+st.markdown("<hr style='border: 4px solid #333; margin: 4rem 0;'>", unsafe_allow_html=True)
+st.markdown("<h1 style='margin-top: 1rem !important;'>SPEECH<br>ANALYSIS</h1>", unsafe_allow_html=True)
+st.markdown("<p>DROP IN RAW AUDIO. GET STRUCTURE.</p>", unsafe_allow_html=True)
+
+SA_RESOURCES_DIR = Path("resources/speech_analysis")
+SA_RESOURCES_DIR.mkdir(parents=True, exist_ok=True)
+SA_HISTORY_FILE = "speech_analysis_history.json"
+
+sa_uploaded_file = st.file_uploader("UPLOAD MEDIA", type=["m4a", "mp4", "mov", "mkv", "wav"], key="sa_uploader")
+
+
+if sa_uploaded_file is not None:
+    if st.session_state.sa_last_analyzed_file != sa_uploaded_file.name:
+        st.session_state.sa_analysis_results = None
+        st.session_state.sa_last_analyzed_file = sa_uploaded_file.name
+
+    st.write("---")
+    
+    # Manual Observation Inputs
+    if not st.session_state.sa_analysis_results:
+        st.markdown("<h3 style='margin-top: 1rem; margin-bottom: 0.5rem;'>MANUAL OBSERVATION</h3>", unsafe_allow_html=True)
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("<p style='color: #FF3300; font-weight: bold; margin-bottom: 0.5rem; text-transform: uppercase;'>1. WATCH BODY (NO AUDIO) <br><span style='font-size: 0.85rem; color: #888;'>HANDS, POSTURE, EYES</span></p>", unsafe_allow_html=True)
+            try:
+                body_observation = st.text_area(" ", height=150, key="body_obs", placeholder="...")
+            except TypeError:
+                body_observation = st.text_area(" ", height=150, key="body_obs")
+        with col2:
+            st.markdown("<p style='color: #FF3300; font-weight: bold; margin-bottom: 0.5rem; text-transform: uppercase;'>2. EYES CLOSED (LISTEN) <br><span style='font-size: 0.85rem; color: #888;'>PACE, TONE, FILLERS, THOUGHT COMPLETION</span></p>", unsafe_allow_html=True)
+            try:
+                audio_observation = st.text_area("  ", height=150, key="audio_obs", placeholder="...")
+            except TypeError:
+                audio_observation = st.text_area("  ", height=150, key="audio_obs")
+        
+        # Disable execution if missing manual analysis
+        can_execute = bool(body_observation.strip() and audio_observation.strip())
+        can_execute_text = "" if can_execute else " [FILL BOXES BEFORE CLICKING]"
+        # Try-except block for older streamlit button disabled prop and use_container_width
+        try:
+            btn_clicked = st.button("EXECUTE ANALYSIS", use_container_width=True, disabled=not can_execute, key="sa_btn")
+        except TypeError:
+            try:
+                # Fallback for old streamlit without disabled
+                btn_clicked = st.button(f"EXECUTE ANALYSIS{can_execute_text}", use_container_width=True, key="sa_btn")
+            except TypeError as detail:
+                # Fallback without use_container_width either
+                btn_clicked = st.button(f"EXECUTE ANALYSIS{can_execute_text}", key="sa_btn")
+        
+        
+        if btn_clicked:
+            unique_str = f"{sa_uploaded_file.name}-{sa_uploaded_file.size}"
+            memory_id = hashlib.md5(unique_str.encode()).hexdigest()
+            
+            processed_ids = load_history_ids(SA_HISTORY_FILE)
+            
+            if memory_id in processed_ids or sa_uploaded_file.name in processed_ids:
+                st.warning(f"FILE '{sa_uploaded_file.name}' ALREADY ANALYZED. CHECK HISTORY.")
+            else:
+                random_filename = f"{uuid.uuid4().hex}{Path(sa_uploaded_file.name).suffix}"
+                file_path = SA_RESOURCES_DIR / random_filename
+                
+                with open(file_path, "wb") as f:
+                    f.write(sa_uploaded_file.getbuffer())
+                
+                loading_msg = "INITIATING SPEECH ANALYSIS SEQUENCE..."
+                if os.path.exists("loading_messages.txt"):
+                    with open("loading_messages.txt", "r") as lf:
+                        msgs = [L.strip() for L in lf if L.strip()]
+                        if msgs:
+                            loading_msg = random.choice(msgs)
+                
+                loading_placeholder = st.empty()
+                loading_placeholder.markdown(f'<div class="loading-container"><div class="loading-text">{loading_msg}</div></div>', unsafe_allow_html=True)
+                time.sleep(0.1)
+                
+                try:
+                    start_time = time.time()
+                    file_id = memory_id
+                    
+                    # Core ML Process
+                    model = load_whisper_model()
+                    
+                    transcript_path = None
+                    is_text_file = False
+                    
+                    analysis_results = process_and_analyze_file(
+                        str(file_path), 
+                        model, 
+                        transcript_path, 
+                        is_text_file, 
+                        False
+                    )
+                    
+                    if analysis_results is None:
+                        raise Exception("Analysis failed to complete internally.")
+                    
+                    # Construct matching payload exactly as user specified
+                    full_payload = {
+                        "date": datetime.now().isoformat(),
+                        "source_file": sa_uploaded_file.name,
+                        "file_id": memory_id,
+                        "manual_observations": {
+                            "visual_notes": body_observation,
+                            "audio_notes": audio_observation
+                        },
+                        "metrics": analysis_results
+                    }
+                    
+                    # Local append logic to history
+                    path = Path(SA_HISTORY_FILE)
+                    history = []
+                    if path.exists():
+                        try:
+                            with open(path, "r", encoding="utf-8") as f:
+                                content = f.read()
+                                if content.strip():
+                                    history = json.loads(content)
+                        except json.JSONDecodeError:
+                            pass
+                    history.append(full_payload)
+                    with open(path, "w", encoding="utf-8") as f:
+                        json.dump(history, f, indent=2)
+                    
+                    load_history_ids.clear()
+                    
+                    elapsed = time.time() - start_time
+                    loading_placeholder.empty()
+                    st.success(f"ANALYSIS COMPLETE IN {elapsed:.2f}s")
+                    
+                    st.session_state.sa_analysis_results = json.dumps(full_payload, indent=2)
+                    try:
+                        st.rerun()
+                    except AttributeError:
+                        st.experimental_rerun()
+                    
+                except Exception as e:
+                    loading_placeholder.empty()
+                    st.error(f"CRITICAL FAILURE: {str(e)}")
+
+if st.session_state.sa_analysis_results:
+    st.markdown("### SYSTEM OUTPUT")
+    
+    json_str = st.session_state.sa_analysis_results
+    
+    btn_html = """
+    <div style="margin-bottom: 20px;">
+        <button id="customCopyBtnSA" style="width:100%; padding: 1.5rem; font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; background-color: #FF3300; color: #000; border: 4px solid #FF3300; cursor: pointer; text-transform: uppercase; transition: all 0.1s ease; box-shadow: 4px 4px 0px #000;">
+           COPY FULL PAYLOAD TO CLIPBOARD
+        </button>
+    </div>
+    """
+    st.markdown(btn_html, unsafe_allow_html=True)
+    
+    safe_json = json_str.replace('\\\\', '\\\\\\\\').replace('`', '\\\\`').replace('$', '\\\\$')
+    js_code = f"""
+    <script>
+        const btnSA = window.parent.document.getElementById('customCopyBtnSA');
+        if (btnSA) {{
+            btnSA.onclick = function() {{
+                window.parent.navigator.clipboard.writeText(`{safe_json}`).then(function() {{
+                    const oldText = btnSA.innerText;
+                    btnSA.innerText = 'COPIED!';
+                    btnSA.style.backgroundColor = '#000';
+                    btnSA.style.color = '#FF3300';
+                    setTimeout(function() {{
+                        btnSA.innerText = oldText;
+                        btnSA.style.backgroundColor = '#FF3300';
+                        btnSA.style.color = '#000';
+                    }}, 2000);
+                }});
+            }};
+        }}
+    </script>
+    """
+    components.html(js_code, height=0, width=0)
+    
+    lines = json_str.splitlines()
+    truncated_json = "\n".join(lines[:15])
+    if len(lines) > 15:
+        truncated_json += "\n\n... [ EXPAND BELOW TO COPY FULL PAYLOAD ]"
+        
+    st.markdown(f'<div class="json-preview"><pre style="color: #666; font-family: \\\'JetBrains Mono\\\', monospace; margin: 0;">{truncated_json}</pre></div>', unsafe_allow_html=True)
+    
+    with st.expander("VIEW FULL PAYLOAD"):
+        st.code(json_str, language="json")
+        
+    try:
+        reset_clicked = st.button("RESET MEMORY & ANALYZE NEW FILE", use_container_width=True, key="sa_reset_btn")
+    except TypeError:
+        reset_clicked = st.button("RESET MEMORY & ANALYZE NEW FILE", key="sa_reset_btn")
+        
+    if reset_clicked:
+        st.session_state.sa_analysis_results = None
+        try:
+            st.rerun()
+        except AttributeError:
+            st.experimental_rerun()

@@ -518,5 +518,40 @@
         ]
       ]
     }
+  },
+  {
+    "date": "2026-03-25T22:35:34.127337",
+    "source_file": "IMG_5404.MOV",
+    "file_id": "924f13f954020e3ce00d95be133bcff8",
+    "manual_observations": {
+      "visual_notes": "test",
+      "audio_notes": "test"
+    },
+    "metrics": {
+      "transcript": "Does that make sense?\nSo where is the",
+      "statistics": {
+        "total_words": 8,
+        "unique_words": 8,
+        "total_filler_words": 1,
+        "filler_word_percentage": 12.5
+      },
+      "readability": {
+        "score": -2.23,
+        "interpretation": "Elementary school level (easy to understand)"
+      },
+      "filler_words": {
+        "so": 1
+      },
+      "word_frequency": [
+        [
+          "make",
+          1
+        ],
+        [
+          "sense",
+          1
+        ]
+      ]
+    }
   }
 ]
