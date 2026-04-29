@@ -1,4 +1,4 @@
-opensmile
+hatopensmile
 faster-whisper
 syllables
 typer
